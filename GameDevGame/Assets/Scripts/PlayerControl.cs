@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+
+    private Rigidbody rb;
+    public float speed;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     void FixedUpdate()
     {
         //player
         GameObject player = GameObject.Find("Player");
-        float speed = 0.2f;
 
         //player presses left
         if (Input.GetKey("a") || Input.GetKey("left"))
@@ -30,5 +38,6 @@ public class PlayerControl : MonoBehaviour
         {
             player.transform.position += Vector3.back * speed;
         }
+        rb.velocity = new Vector3(0,0,0);
     }
 }
