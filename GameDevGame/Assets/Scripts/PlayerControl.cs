@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody rb;
     public float speed;
     public float jumpPower;
+    public bool allowJumping;
 
     void Start()
     {
@@ -40,13 +41,13 @@ public class PlayerControl : MonoBehaviour
                 player.transform.position += Vector3.back * speed;
         }
         //player presses space
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && allowJumping)
         {
             //check if player is on the ground
             if (Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f))
             {
                 //check if player already has y velocity
-                if (rb.velocity.y==0) {
+                if (rb.velocity.y<0.1f) {
                     rb.AddForce(transform.up * jumpPower);
                 }
             }
