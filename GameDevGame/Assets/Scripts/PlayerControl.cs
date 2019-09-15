@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody rb;
     public float speed;
+    public float jumpPower;
 
     void Start()
     {
@@ -36,8 +37,21 @@ public class PlayerControl : MonoBehaviour
         //player presses down
         if (Input.GetKey("s") || Input.GetKey("down"))
         {
-            player.transform.position += Vector3.back * speed;
+                player.transform.position += Vector3.back * speed;
         }
-        rb.velocity = new Vector3(0,0,0);
+        //player presses space
+        if (Input.GetKey(KeyCode.Space))
+        {
+            //check if player is on the ground
+            if (Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f))
+            {
+                //check if player already has y velocity
+                if (rb.velocity.y==0) {
+                    rb.AddForce(transform.up * jumpPower);
+                }
+            }
+        }
+        //remove front, back, left and right velocities
+        rb.velocity = new Vector3(0,rb.velocity.y,0);
     }
 }

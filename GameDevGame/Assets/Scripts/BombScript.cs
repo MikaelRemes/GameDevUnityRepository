@@ -29,23 +29,19 @@ public class BombScript : MonoBehaviour
         
         if (boxBlocking)
         {
-            //Set the main Color of the Material to green
             rend.material.shader = Shader.Find("_Color");
-            rend.material.SetColor("_Color", Color.green);
-
-            //Find the Specular shader and change its Color to red
-            rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_SpecColor", Color.red);
+            rend.material.SetColor("_Color", new Color(0f,1f,0f,0.4f));
+            
+            rend.material.shader = Shader.Find("Transparent/Diffuse");
+            rend.material.SetColor("_TransColor", new Color(0f, 1f, 0f, 0.4f));
         }
         else
         {
-            //Set the main Color of the Material to green
             rend.material.shader = Shader.Find("_Color");
-            rend.material.SetColor("_Color", Color.blue);
+            rend.material.SetColor("_Color", new Color(0f, 0f, 1f, 0.4f));
 
-            //Find the Specular shader and change its Color to red
-            rend.material.shader = Shader.Find("Specular");
-            rend.material.SetColor("_SpecColor", Color.blue);
+            rend.material.shader = Shader.Find("Transparent/Diffuse");
+            rend.material.SetColor("_TransColor", new Color(0f, 0f, 1f, 0.4f));
         }
     }
 }
