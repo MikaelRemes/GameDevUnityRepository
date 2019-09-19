@@ -50,17 +50,18 @@ public class TurretPlacerButton : MonoBehaviour
                     GameObject objectHit = hit.collider.gameObject;
                     if (objectHit.Equals(planet))
                     {
-                        placeTurret(hit.transform);
+                        placeTurret(hit.point, hit.normal);
                     }
                 }
             }
         }
     }
 
-    private void placeTurret(Transform spot)
+    private void placeTurret(Vector3 hitPos, Vector3 hitNormal)
     {
         GameObject currentTurret = Instantiate(basicTurret);
-        currentTurret.transform.position = spot.position;
-        currentTurret.transform.rotation = spot.rotation;
+        currentTurret.transform.position = hitPos;
+        currentTurret.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
+        currentTurret.transform.parent = planet.transform;
     }
 }

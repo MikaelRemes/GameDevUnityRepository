@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1615437794}
-  basicTurret: {fileID: 8655600531298909681, guid: c19b53d1fbfb21149a80c7c8c7c6ce09,
+  basicTurret: {fileID: 6486690747190616650, guid: a72af7600a583254a99425f0d5f0cdc5,
     type: 3}
   cameraView: {fileID: 534669904}
 --- !u!1 &1589329316
