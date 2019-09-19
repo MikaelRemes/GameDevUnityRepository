@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatePlanet : MonoBehaviour
 {
     public float rotateSpeed=40f;
-    public bool rotateEnabled = false;
+    public static bool rotateEnabled = false;
     
     void OnMouseDrag()
     {
@@ -17,10 +17,5 @@ public class RotatePlanet : MonoBehaviour
             transform.Rotate(Vector3.up, -rotateX);
             transform.Rotate(Vector3.right, rotateY);
         }
-    }
-
-    public void EnableDisableRotatePlanet()
-    {
-        rotateEnabled = !rotateEnabled;
     }
 }
