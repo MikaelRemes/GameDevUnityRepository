@@ -830,6 +830,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b77108c6904324090494fb95724393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 1615437794}
+  basicTurret: {fileID: 8655600531298909681, guid: c19b53d1fbfb21149a80c7c8c7c6ce09,
+    type: 3}
+  cameraView: {fileID: 534669904}
 --- !u!1 &1589329316
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +924,6 @@ GameObject:
   - component: {fileID: 1615437796}
   - component: {fileID: 1615437795}
   - component: {fileID: 1615437799}
-  - component: {fileID: 1615437800}
   m_Layer: 0
   m_Name: PlayersPlanet
   m_TagString: Planet
@@ -1013,22 +1016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 40
---- !u!114 &1615437800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615437794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411ed8cc1b800f749990240a28ce4ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planet: {fileID: 1615437794}
-  basicTurret: {fileID: 6853105322323808012, guid: ce4e53be6ea161c479ab377efa57f7cc,
-    type: 3}
-  cameraView: {fileID: 534669904}
 --- !u!1 &1836383011
 GameObject:
   m_ObjectHideFlags: 0
