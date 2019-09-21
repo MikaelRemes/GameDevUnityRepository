@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Planet
   - Turret
+  - Enemy
   layers:
   - Default
   - TransparentFX
