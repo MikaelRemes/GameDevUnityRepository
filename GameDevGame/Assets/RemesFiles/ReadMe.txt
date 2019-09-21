@@ -5,7 +5,10 @@ it is hard to rotate camera. The reason for this is because the script for rotat
 attached to playersplanet gameobject which has an onMouseDrag method which checks if
 player drags his mouse on planet. I recommend a change that the uses keyboard to move camera instead
 of mouse. (just update method that uses arrow keys to move rotatetemp.) (this would also remove
-the need for a rotatecamera button) (also removes the need for a global variable enablerotate).
+the need for a rotatecamera button) (also removes the need for a global variable enablerotate)
+(would also remove onMouseDragMethod which also removes need to attach script to planet)
+(it would also remove need for more than one handle for camera).
+[TL;DR TODO: move camera with keyboard, removes lots of problems]
 
 -TODO: help button that displays intructions to player.
 
