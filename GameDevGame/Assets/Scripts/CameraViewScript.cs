@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CameraViewScript : MonoBehaviour
 {
-    public Vector3 planetViewPosition = new Vector3(0,5,-52);
-    public Quaternion planetViewRotation =  Quaternion.Euler(5, 0, 0);
-    public Vector3 orbitViewPosition = new Vector3(0,170,-170);
+    public Vector3 planetViewPosition = new Vector3(0,0,-70);
+    public Quaternion planetViewRotation =  Quaternion.Euler(0, 0, 0);
+    public Vector3 orbitViewPosition = new Vector3(0,0,-260);
     public Quaternion orbitViewRotation = Quaternion.Euler(45,0,0);
     public int cameraState = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = planetViewPosition;
         transform.SetPositionAndRotation(planetViewPosition, planetViewRotation);
     }
 
