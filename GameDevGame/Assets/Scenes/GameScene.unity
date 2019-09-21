@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 1191228586}
   - component: {fileID: 1191228585}
   m_Layer: 0
-  m_Name: EnemySpawnPoint1 or MotherShip1
+  m_Name: EnemyMotherShip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Monies: 0'
+  m_Text: 'Monies: X'
 --- !u!222 &1589329319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1685192362}
   m_Layer: 0
-  m_Name: EnemyManager
+  m_Name: EnemyWaveManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
