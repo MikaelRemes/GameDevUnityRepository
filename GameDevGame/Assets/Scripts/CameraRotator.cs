@@ -48,5 +48,6 @@ public class CameraRotator : MonoBehaviour
             cameraState = 1;
         }
         transform.rotation = transform.rotation * Quaternion.Euler(handleRotationAngles);
+        //transform.rotation = Quaternion.Euler(handleRotationAngles.x, handleRotationAngles.y, 0);
     }
 }
