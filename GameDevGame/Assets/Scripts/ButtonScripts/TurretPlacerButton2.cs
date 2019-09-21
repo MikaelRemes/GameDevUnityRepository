@@ -63,5 +63,6 @@ public class TurretPlacerButton2 : MonoBehaviour
         currentTurret.transform.position = hitPos;
         currentTurret.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
         currentTurret.transform.parent = planet.transform;
+        Debug.Log("Placed turret");
     }
 }

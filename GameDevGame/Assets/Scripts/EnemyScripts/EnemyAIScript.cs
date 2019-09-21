@@ -9,6 +9,9 @@ public class EnemyAIScript : MonoBehaviour
 
     void Start()
     {
+        //necessary to find target when spawned via script
+        targetPlanet = GameObject.FindGameObjectWithTag("Planet");
+
         //move enemy towards player at speed x
         //if speed can be slowed or planet can move, move this method to update
         gameObject.GetComponent<Rigidbody>().velocity =
@@ -19,7 +22,8 @@ public class EnemyAIScript : MonoBehaviour
     {
         if (collision.gameObject.Equals(targetPlanet))
         {
-            //TODO: deal damage to player
+            Player.HP -= 1;
+            Debug.Log("Enemy hit player");
             Destroy(gameObject);
         }
     }
