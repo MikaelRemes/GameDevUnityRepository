@@ -19,12 +19,12 @@ public class CameraViewScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("q"))
         {
             transform.SetPositionAndRotation(planetViewPosition, planetViewRotation);
             cameraState = 0;
         }
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("e"))
         {
             transform.SetPositionAndRotation(orbitViewPosition, orbitViewRotation);
             cameraState = 1;
