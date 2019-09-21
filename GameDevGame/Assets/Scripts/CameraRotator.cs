@@ -14,22 +14,23 @@ public class CameraRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 handleRotationAngles = new Vector3(0,0,0);
         if (Input.GetKey("w"))
         {
-            handleRotationAngles.x += rotateSpeed;
+            transform.Rotate(Vector3.right, rotateSpeed, Space.Self);
         }
         if (Input.GetKey("a"))
         {
-            handleRotationAngles.y += rotateSpeed;
+            if(Vector3.Dot(transform.up, Vector3.down) <= 0)transform.Rotate(Vector3.up, rotateSpeed, Space.World);
+            else transform.Rotate(Vector3.up, -rotateSpeed, Space.World);
         }
         if (Input.GetKey("s"))
         {
-            handleRotationAngles.x -= rotateSpeed;
+            transform.Rotate(Vector3.right, -rotateSpeed, Space.Self);
         }
         if (Input.GetKey("d"))
         {
-            handleRotationAngles.y -= rotateSpeed;
+            if (Vector3.Dot(transform.up, Vector3.down) <= 0) transform.Rotate(Vector3.up, -rotateSpeed, Space.World);
+            else transform.Rotate(Vector3.up, rotateSpeed, Space.World);
         }
         if (Input.GetKey("q"))
         {
@@ -47,7 +48,9 @@ public class CameraRotator : MonoBehaviour
             playerCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
             cameraState = 1;
         }
-        transform.rotation = transform.rotation * Quaternion.Euler(handleRotationAngles);
-        //transform.rotation = Quaternion.Euler(handleRotationAngles.x, handleRotationAngles.y, 0);
+        if (Input.GetKeyDown("r"))
+        {
+            Debug.Log("" + (transform.localEulerAngles.y <= 90));
+        }
     }
 }

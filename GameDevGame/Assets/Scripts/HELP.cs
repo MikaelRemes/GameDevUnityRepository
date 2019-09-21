@@ -8,7 +8,9 @@ public class HELP : MonoBehaviour
     {
         Debug.Log("HELP pressed...");
         Debug.Log("Use WASD to rotate planet");
+        Debug.Log("Use Q and E to change view distance");
         Debug.Log("Developer mode: ");
         Debug.Log("Use space to spawn enemy");
+
     }
 }

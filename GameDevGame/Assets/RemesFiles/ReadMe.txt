@@ -9,6 +9,7 @@ the need for a rotatecamera button) (also removes the need for a global variable
 (would also remove onMouseDragMethod which also removes need to attach script to planet)
 (it would also remove need for more than one handle for camera).
 [TL;DR TODO: move camera with keyboard, removes lots of problems]
+-Made camera movable with WASD keys
 
 -TODO: help button that displays intructions to player.
 
