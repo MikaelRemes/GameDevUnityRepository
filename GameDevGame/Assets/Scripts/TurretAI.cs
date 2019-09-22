@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour
 {
-    public float range=50f;
+    public float range=130f;
     public string enemyTag = "Enemy";
     public Transform rotateAxis;
 
