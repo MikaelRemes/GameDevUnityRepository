@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class TurretAI : MonoBehaviour
 {
-    public float range=130f;
+    [Header ("Attributes")]
+    public float range=100f;
+    public float fireRatePerSec=2;
+    private float fireCountDown = 0f;
+
+    [Header("Setup fields")]
     public string enemyTag = "Enemy";
     public Transform rotateAxis;
+    public GameObject bullet;
+    public Transform firePoint;
 
     private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f,0.5f);
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
     void UpdateTarget()
@@ -41,6 +48,16 @@ public class TurretAI : MonoBehaviour
         }
     }
 
+    void Shoot(Transform target)
+    {
+        GameObject thisBullet = (GameObject) Instantiate(bullet, firePoint.position, firePoint.rotation);
+        BulletScript bulletScript = thisBullet.GetComponent<BulletScript>();
+        if(bulletScript != null)
+        {
+            bulletScript.setTargetTo(target);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -49,6 +66,16 @@ public class TurretAI : MonoBehaviour
             Vector3 directionOfEnemy = target.position - transform.position;
             Quaternion lookDirection = Quaternion.LookRotation(directionOfEnemy);
             rotateAxis.rotation = lookDirection;
+
+
+            if (fireCountDown <= 0)
+            {
+                Shoot(target);
+                fireCountDown = 1f / fireRatePerSec;
+            }
+
+            fireCountDown -= Time.deltaTime;
+
         }
     }
 }
