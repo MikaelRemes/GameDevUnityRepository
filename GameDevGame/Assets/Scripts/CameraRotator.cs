@@ -5,11 +5,8 @@ using UnityEngine;
 public class CameraRotator : MonoBehaviour
 {
     public float rotateSpeed = 1f;
+    public float zoomSpeed = 1f;
     public Camera playerCamera;
-    public Vector3 planetViewPosition = new Vector3(0, 0, -70);
-    public Vector3 orbitViewPosition = new Vector3(0, 0, -260);
-
-    private int cameraState = 0;
 
     // Update is called once per frame
     void Update()
@@ -34,23 +31,17 @@ public class CameraRotator : MonoBehaviour
         }
         if (Input.GetKey("q"))
         {
-            //currently changing view resets position
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            playerCamera.transform.position = planetViewPosition;
-            playerCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
-            cameraState = 0;
+            //currently changing zoom
+            Vector3 direction = transform.position - playerCamera.transform.position;
+            direction.Normalize();
+            playerCamera.transform.position -= direction;
         }
         if (Input.GetKey("e"))
         {
-            //currently changing view resets positions
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            playerCamera.transform.position = orbitViewPosition;
-            playerCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
-            cameraState = 1;
-        }
-        if (Input.GetKeyDown("r"))
-        {
-            Debug.Log("" + (transform.localEulerAngles.y <= 90));
+            //currently changing zoom
+            Vector3 direction = transform.position - playerCamera.transform.position;
+            direction.Normalize();
+            playerCamera.transform.position += direction;
         }
     }
 }
