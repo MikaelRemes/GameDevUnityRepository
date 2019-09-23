@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -576,7 +576,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Place Turret
+  m_Text: Buy basic turret (25)
 --- !u!222 &328859243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1720,6 +1720,7 @@ MonoBehaviour:
   planet: {fileID: 1615437794}
   basicTurret: {fileID: 303049670713373032, guid: 3d5c97f2a8aa8ab4982aa091bd5812a4,
     type: 3}
+  cost: 25
   cameraView: {fileID: 534669904}
 --- !u!1 &1575315865
 GameObject:

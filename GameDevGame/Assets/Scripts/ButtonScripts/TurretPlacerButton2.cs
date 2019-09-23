@@ -9,6 +9,7 @@ public class TurretPlacerButton2 : MonoBehaviour
     
     public GameObject planet;
     public GameObject basicTurret;
+    public int cost=25;
     public Camera cameraView;
 
     void Awake()
@@ -63,6 +64,8 @@ public class TurretPlacerButton2 : MonoBehaviour
         currentTurret.transform.position = hitPos;
         currentTurret.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
         currentTurret.transform.parent = planet.transform;
-        Debug.Log("Placed turret");
+        DisableTurretPlacement();
+        Player.monies -= cost;
+        Debug.Log("Placed turret, cost: " + cost);
     }
 }
