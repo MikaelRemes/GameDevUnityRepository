@@ -3,3 +3,5 @@ Some improvement suggestions and improvements 23.9.:
 -enemies have HP
 
 -turrets can fire and firing has cool particle effect
+
+-created shop
