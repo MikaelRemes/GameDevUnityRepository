@@ -6,6 +6,7 @@ public class EnemyAIScript : MonoBehaviour
 {
     public GameObject targetPlanet;
     public float speed=0.05f;
+    public int hitPoints = 10;
 
     void Start()
     {
@@ -26,5 +27,11 @@ public class EnemyAIScript : MonoBehaviour
             Debug.Log("Enemy hit player");
             Destroy(gameObject);
         }
+    }
+
+    public void takeDamage(int Damage)
+    {
+        hitPoints -= Damage;
+        if (hitPoints <= 0) Destroy(gameObject);
     }
 }

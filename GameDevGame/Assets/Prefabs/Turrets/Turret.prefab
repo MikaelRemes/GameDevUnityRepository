@@ -65,11 +65,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 100
-  fireRatePerSec: 2
+  fireRatePerSec: 1
   enemyTag: Enemy
   rotateAxis: {fileID: 2507225256901360282}
   bullet: {fileID: 6732353736341421321, guid: 8fbc8695748f10f49bfec0e666cf4eb0, type: 3}
   firePoint: {fileID: 916941974997473404}
+  fireEffect: {fileID: 8618325853932239215, guid: a9d0beac18ec5114fa2819898628c017,
+    type: 3}
 --- !u!1 &489751131521482823
 GameObject:
   m_ObjectHideFlags: 0

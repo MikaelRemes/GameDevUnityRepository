@@ -6,7 +6,7 @@ public class TurretAI : MonoBehaviour
 {
     [Header ("Attributes")]
     public float range=100f;
-    public float fireRatePerSec=2;
+    public float fireRatePerSec=1;
     private float fireCountDown = 0f;
 
     [Header("Setup fields")]
@@ -14,6 +14,7 @@ public class TurretAI : MonoBehaviour
     public Transform rotateAxis;
     public GameObject bullet;
     public Transform firePoint;
+    public GameObject fireEffect;
 
     private Transform target;
 
@@ -56,6 +57,8 @@ public class TurretAI : MonoBehaviour
         {
             bulletScript.setTargetTo(target);
         }
+        GameObject fireParticles = Instantiate(fireEffect, firePoint.position, Quaternion.LookRotation(target.position - transform.position));
+        Destroy(fireParticles, 1f);
     }
 
     // Update is called once per frame

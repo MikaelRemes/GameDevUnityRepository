@@ -2,7 +2,7 @@
 
 public class BulletScript : MonoBehaviour
 {
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 150f;
     private Transform target;
 
     public void setTargetTo(Transform _target)
@@ -36,6 +36,8 @@ public class BulletScript : MonoBehaviour
     void HitTarget()
     {
         Debug.Log("Target hit");
+        GameObject enemy = target.gameObject;
+        enemy.GetComponent<EnemyAIScript>().takeDamage(3);
         Destroy(gameObject);
     }
 }
