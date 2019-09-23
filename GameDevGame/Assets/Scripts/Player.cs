@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     public Text waveText;
     public Text moniesText;
     
-    // Update is called once per frame
     void Update()
     {
         //TODO: check current HP, if 0 end game
