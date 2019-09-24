@@ -15,7 +15,7 @@ public class EnemyWaveSpawner : MonoBehaviour
         }
     }
 
-    void SpawnEnemy()
+    public void SpawnEnemy()
     {
         GameObject currentEnemy=Instantiate(enemy);
         currentEnemy.transform.position = gameObject.transform.position;
