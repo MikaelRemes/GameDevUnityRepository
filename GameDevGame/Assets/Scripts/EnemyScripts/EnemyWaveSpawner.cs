@@ -6,19 +6,10 @@ public class EnemyWaveSpawner : MonoBehaviour
 {
     public GameObject enemy;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown("g"))
-        {
-            SpawnEnemy();
-        }
-    }
-
-    public void SpawnEnemy()
+    public void SpawnBasicEnemy()
     {
         GameObject currentEnemy=Instantiate(enemy);
         currentEnemy.transform.position = gameObject.transform.position;
-        Debug.Log("Spawned enemy");
+        Debug.Log("Spawned basic enemy");
     }
 }

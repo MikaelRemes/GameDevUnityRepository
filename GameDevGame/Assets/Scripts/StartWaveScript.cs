@@ -10,10 +10,10 @@ public class StartWaveScript : MonoBehaviour
     {
         EnemyWaveSpawner[] enemyMotherShips = enemyShips.GetComponentsInChildren<EnemyWaveSpawner>();
 
-        //TODO: spawn a wave, not a single enemy
+        //TODO: spawn a wave, not a single enemy from each ship
         foreach(EnemyWaveSpawner motherShip in enemyMotherShips)
         {
-            motherShip.SpawnEnemy();
+            motherShip.SpawnBasicEnemy();
         }
     }
 }
