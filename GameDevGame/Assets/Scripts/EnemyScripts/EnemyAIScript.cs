@@ -7,6 +7,7 @@ public class EnemyAIScript : MonoBehaviour
     public GameObject targetPlanet;
     public float speed=0.05f;
     public int hitPoints = 10;
+    public int moneyReward = 10;
 
     void Start()
     {
@@ -32,6 +33,15 @@ public class EnemyAIScript : MonoBehaviour
     public void takeDamage(int Damage)
     {
         hitPoints -= Damage;
-        if (hitPoints <= 0) Destroy(gameObject);
+        if (hitPoints <= 0)
+        {
+            die();
+        }
+    }
+
+    public void die()
+    {
+        Player.monies += moneyReward;
+        Destroy(gameObject);
     }
 }

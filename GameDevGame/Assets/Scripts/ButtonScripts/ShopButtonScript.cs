@@ -12,10 +12,12 @@ public class ShopButtonScript : MonoBehaviour
         GameObject[] buttons =  GameObject.FindGameObjectsWithTag("ShopButton");
         foreach(GameObject button in buttons)
         {
+            //disable turret placement
+            if (button.GetComponent<TurretPlacerButton2>() != null) button.GetComponent<TurretPlacerButton2>().DisableTurretPlacement();
+
             button.GetComponent<Button>().enabled = !button.GetComponent<Button>().enabled;
             button.GetComponent<Image>().enabled = !button.GetComponent<Image>().enabled;
             button.GetComponentInChildren<Text>().enabled = !button.GetComponentInChildren<Text>().enabled;
-            //else Show(button);
         }
     }
 }

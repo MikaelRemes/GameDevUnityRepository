@@ -30,6 +30,7 @@ public class TurretAI : MonoBehaviour
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
+        //TODO: use physics.raycast to check that turret has a visual to enemy (planet or moon wont obstruct its view)
         foreach(GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
