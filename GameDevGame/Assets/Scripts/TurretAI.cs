@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretAI : MonoBehaviour
 {
     [Header ("Attributes")]
-    public float range=100f;
+    public float range=150f;
     public float fireRatePerSec=1;
     private float fireCountDown = 0f;
 
