@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     //Stored global variables
     public static int HP=100;
-    public static int monies=0;
+    public static int monies=100;
     public static int wave=1;
 
     public Text hpText;
@@ -25,6 +25,6 @@ public class Player : MonoBehaviour
     {
         hpText.text = "Planet HP: " + HP;
         waveText.text = "Wave: " + wave;
-        moniesText.text = "Monies: " + monies;
+        moniesText.text = "Money: " + monies;
     }
 }
