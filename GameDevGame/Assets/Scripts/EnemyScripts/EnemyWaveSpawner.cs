@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyWaveSpawner : MonoBehaviour
 {
     public GameObject enemy;
-    public float enemySpawnDelay = 0.5f;
+    public float enemySpawnDelay = 0.3f;
 
     public void SpawnBasicEnemy()
     {
