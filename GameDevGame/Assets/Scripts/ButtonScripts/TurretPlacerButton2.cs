@@ -7,8 +7,8 @@ public class TurretPlacerButton2 : MonoBehaviour
 {
     private bool placingTurret=false;
     
-    public GameObject planet;
-    public GameObject moon;
+    public string planetTag = "Planet";
+    public string moonTag="Moon";
     public GameObject basicTurret;
     public int cost=25;
     public Camera cameraView;
@@ -50,14 +50,15 @@ public class TurretPlacerButton2 : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     //POSSIBLE TODO: ignore moon if planet is hit or vice versa
+                    //TODO: check if enough monies
                     GameObject objectHit = hit.collider.gameObject;
-                    if (objectHit.Equals(planet))
+                    if (objectHit.tag.Equals(planetTag))
                     {
-                        placeTurret(hit.point, hit.normal, planet);
+                        placeTurret(hit.point, hit.normal, objectHit);
                     }
-                    else if (objectHit.Equals(moon))
+                    else if (objectHit.tag.Equals(moonTag))
                     {
-                        placeTurret(hit.point, hit.normal, moon);
+                        placeTurret(hit.point, hit.normal, objectHit);
                     }
                 }
             }
