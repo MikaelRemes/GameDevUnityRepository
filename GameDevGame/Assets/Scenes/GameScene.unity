@@ -124,8 +124,9 @@ GameObject:
   - component: {fileID: 21856360}
   - component: {fileID: 21856359}
   - component: {fileID: 21856358}
+  - component: {fileID: 21856361}
   m_Layer: 5
-  m_Name: AnotherButton (1)
+  m_Name: DeathLaserButton
   m_TagString: ShopButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 21856361}
         m_MethodName: PressedButton
         m_Mode: 1
         m_Arguments:
@@ -237,6 +238,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21856356}
   m_CullTransparentMesh: 0
+--- !u!114 &21856361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21856356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aa6f67f03aa1142a9743aced76582e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetTag: Planet
+  moonTag: Moon
+  basicTurret: {fileID: 3304652521911222847, guid: 97f0f2faa5ee361438e2bee3a98c90b4,
+    type: 3}
+  cost: 1000
+  cameraView: {fileID: 534669904}
 --- !u!1 &26981755
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,12 +394,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa6f67f03aa1142a9743aced76582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 1615437794}
-  moon: {fileID: 1562300106}
+  planetTag: Planet
+  moonTag: Moon
   basicTurret: {fileID: 7527841529044886888, guid: 5492fcc856cb56c489ade67ccaa760a9,
     type: 3}
   cost: 100
   cameraView: {fileID: 534669904}
+--- !u!1 &57443976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57443977}
+  - component: {fileID: 57443978}
+  m_Layer: 0
+  m_Name: MoonHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57443977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57443976}
+  m_LocalRotation: {x: -0.39044833, y: 0.8373192, z: -0.161729, w: 0.34682897}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_Children:
+  - {fileID: 1080020155}
+  m_Father: {fileID: 1615437798}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 135, z: -50}
+--- !u!114 &57443978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57443976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be83946f940a394087e6acf20129674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 20
 --- !u!1 &130654184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1511,97 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 1, y: 1}
+--- !u!1 &1080020154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080020155}
+  - component: {fileID: 1080020158}
+  - component: {fileID: 1080020157}
+  - component: {fileID: 1080020156}
+  m_Layer: 0
+  m_Name: PlayersMoon2
+  m_TagString: Moon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080020155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080020154}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200, y: 0, z: 0}
+  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_Children: []
+  m_Father: {fileID: 57443977}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1080020156
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080020154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1080020157
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080020154}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 382cda4fd75cc1043bb28f8256028de0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1080020158
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080020154}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1141305009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +2076,7 @@ GameObject:
   - component: {fileID: 1562300109}
   - component: {fileID: 1562300108}
   m_Layer: 0
-  m_Name: PlayersMoon
+  m_Name: PlayersMoon1
   m_TagString: Moon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1935,7 +2090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562300106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150, y: 0, z: 0}
+  m_LocalPosition: {x: 125, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 1913018367}
@@ -2137,8 +2292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa6f67f03aa1142a9743aced76582e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 1615437794}
-  moon: {fileID: 1562300106}
+  planetTag: Planet
+  moonTag: Moon
   basicTurret: {fileID: 303049670713373032, guid: 3d5c97f2a8aa8ab4982aa091bd5812a4,
     type: 3}
   cost: 25
@@ -2387,6 +2542,7 @@ Transform:
   m_Children:
   - {fileID: 706619892}
   - {fileID: 1913018367}
+  - {fileID: 57443977}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2583,7 +2739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2601,7 +2757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Placeholder2
+  m_Text: Buy death laser (1000)
 --- !u!222 &2128624975
 CanvasRenderer:
   m_ObjectHideFlags: 0

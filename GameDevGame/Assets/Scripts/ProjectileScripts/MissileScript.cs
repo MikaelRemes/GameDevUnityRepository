@@ -51,7 +51,6 @@ public class MissileScript : MonoBehaviour
 
     void HitTarget()
     {
-        Debug.Log("Target hit");
         GameObject enemy = target.gameObject;
         enemy.GetComponent<EnemyAIScript>().takeDamage(missileDirectDamage);
         Explode();
