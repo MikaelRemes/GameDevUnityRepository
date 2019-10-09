@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
   speed: 0.1
+  hitPoints: 10
+  moneyReward: 10
 --- !u!54 &5718744066705533962
 Rigidbody:
   m_ObjectHideFlags: 0

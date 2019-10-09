@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a858654995e8df24aa56756028a439f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7230620583104083735, guid: 8ca5f5ec7f8eb4140b4f1313c5beefee, type: 3}
+  enemy: {fileID: 2438947260381041814, guid: 59c96371717f90b4c80df4e6dfba1118, type: 3}
   enemySpawnDelay: 0.3
 --- !u!23 &1191228586
 MeshRenderer:

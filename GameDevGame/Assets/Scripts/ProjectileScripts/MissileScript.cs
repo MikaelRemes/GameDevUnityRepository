@@ -4,7 +4,7 @@ public class MissileScript : MonoBehaviour
 {
     [Header("Attributes")]
     public float missileSpeed = 35f;
-    public float missileAcceleration = 10f;
+    public float missileAcceleration = 20f;
     public float explosionRadius = 20f;
     public int missileDirectDamage = 25;
     public int missileAoeDamage = 25;
@@ -36,7 +36,7 @@ public class MissileScript : MonoBehaviour
 
             if (direction.magnitude - collisionDistance <= distanceToMove)
             {
-                //Bullet hit target
+                //Missile hit target
                 HitTarget();
                 return;
             }
