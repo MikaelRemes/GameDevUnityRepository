@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3304652521911222847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5018697, y: 45.67171, z: -29.818293}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,8 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 300
-  fireRatePerSec: 0.25
-  laserDamage: 100
+  laserDamagePerSec: 100
   enemyTag: Enemy
   rotateAxis: {fileID: 752098032176734432}
   firePoint: {fileID: 752098032176734432}

@@ -12,6 +12,7 @@ public class TurretPlacerButton2 : MonoBehaviour
     public GameObject basicTurret;
     public int cost=25;
     public Camera cameraView;
+    public string shopButtonTag = "ShopButton";
 
     void Awake()
     {
@@ -24,19 +25,35 @@ public class TurretPlacerButton2 : MonoBehaviour
     {
         if (placingTurret)
         {
-            GetComponent<Image>().color = Color.red;
+            GameObject[] buttons = GameObject.FindGameObjectsWithTag("ShopButton");
+            foreach (GameObject button in buttons)
+            {
+                //disable turret placement
+                button.GetComponent<TurretPlacerButton2>().DisableTurretPlacement();
+            }
         }
         else
         {
-            GetComponent<Image>().color = Color.green;
+            GameObject[] buttons = GameObject.FindGameObjectsWithTag("ShopButton");
+            foreach (GameObject button in buttons)
+            {
+                //disable turret placement
+                button.GetComponent<TurretPlacerButton2>().DisableTurretPlacement();
+            }
+            EnableTurretPlacement();
         }
-        placingTurret = !placingTurret;
     }
 
     public void DisableTurretPlacement()
     {
         GetComponent<Image>().color = Color.red;
         placingTurret = false;
+    }
+
+    public void EnableTurretPlacement()
+    {
+        GetComponent<Image>().color = Color.green;
+        placingTurret = true;
     }
 
     void Update()
@@ -51,6 +68,7 @@ public class TurretPlacerButton2 : MonoBehaviour
                 {
                     //POSSIBLE TODO: ignore moon if planet is hit or vice versa
                     //TODO: check if enough monies
+                    //TODO: disable placement of turrets on top of one another
                     GameObject objectHit = hit.collider.gameObject;
                     if (objectHit.tag.Equals(planetTag))
                     {
