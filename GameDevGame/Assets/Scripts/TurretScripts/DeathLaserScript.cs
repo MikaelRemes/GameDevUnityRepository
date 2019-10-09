@@ -56,7 +56,6 @@ public class DeathLaserScript : MonoBehaviour
         
         laserEffect.SetPosition(0, firePoint.position);
         laserEffect.SetPosition(1, target.position);
-        Invoke("resetLaser", 0.3f);
     }
 
     public void resetLaser()
@@ -77,12 +76,13 @@ public class DeathLaserScript : MonoBehaviour
 
             if (fireCountDown <= 0)
             {
-                Shoot(target, laserDamagePerSec  * Time.deltaTime);
+                Shoot(target, laserDamagePerSec * Time.deltaTime);
                 fireCountDown = 1f / fireUpdateRate;
             }
 
             fireCountDown -= Time.deltaTime;
 
         }
+        else resetLaser();
     }
 }

@@ -661,7 +661,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy basic turret (25)
+  m_Text: Buy cannon turret (25)
 --- !u!222 &328859243
 CanvasRenderer:
   m_ObjectHideFlags: 0

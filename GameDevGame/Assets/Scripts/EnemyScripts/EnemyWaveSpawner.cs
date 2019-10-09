@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    public GameObject enemy;
-    public float enemySpawnDelay = 0.3f;
+    public GameObject ufoEnemy;
+    public GameObject spikerEnemy;
+    public float enemySpawnDelay = 1f;
 
     public void SpawnBasicEnemy()
     {
-        GameObject currentEnemy=Instantiate(enemy);
+        GameObject currentEnemy=Instantiate(ufoEnemy);
         currentEnemy.transform.position = gameObject.transform.position;
         Debug.Log("Spawned basic enemy");
+    }
+
+    public void SpawnSpikerEnemy()
+    {
+        GameObject currentEnemy = Instantiate(spikerEnemy);
+        currentEnemy.transform.position = gameObject.transform.position;
+        Debug.Log("Spawned spiker enemy");
     }
 
     public void SpawnBasicEnemiesFromShip(int enemyNum)
     {
         for (int i=0;i<enemyNum;i++) {
             //spawns basic enemy every second
-            Invoke("SpawnBasicEnemy", i);
+            Invoke("SpawnBasicEnemy", enemySpawnDelay*i);
         }
     }
 }

@@ -4790,8 +4790,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a858654995e8df24aa56756028a439f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2438947260381041814, guid: 59c96371717f90b4c80df4e6dfba1118, type: 3}
-  enemySpawnDelay: 0.3
+  ufoEnemy: {fileID: 2438947260381041814, guid: 59c96371717f90b4c80df4e6dfba1118,
+    type: 3}
+  spikerEnemy: {fileID: 3141604689190670079, guid: c16bbbc0786d3284d9c918ac92b8a7a9,
+    type: 3}
+  enemySpawnDelay: 1
 --- !u!114 &8720107199262133092
 MonoBehaviour:
   m_ObjectHideFlags: 0
