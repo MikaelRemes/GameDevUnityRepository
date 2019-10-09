@@ -254,7 +254,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 3304652521911222847, guid: 97f0f2faa5ee361438e2bee3a98c90b4,
     type: 3}
-  cost: 1000
+  cost: 250
   cameraView: {fileID: 534669904}
 --- !u!1 &26981755
 GameObject:
@@ -2757,7 +2757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy death laser (1000)
+  m_Text: Buy death laser (250)
 --- !u!222 &2128624975
 CanvasRenderer:
   m_ObjectHideFlags: 0

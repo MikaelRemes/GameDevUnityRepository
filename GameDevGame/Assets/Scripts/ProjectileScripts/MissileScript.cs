@@ -2,15 +2,17 @@
 
 public class MissileScript : MonoBehaviour
 {
+    [Header("Attributes")]
     public float missileSpeed = 35f;
     public float missileAcceleration = 10f;
-
     public float explosionRadius = 20f;
     public int missileDirectDamage = 25;
     public int missileAoeDamage = 25;
 
+    [Header("Setup fields")]
     public string enemyTag = "Enemy";
     public GameObject explosionVisual;
+    public float newTargetSearchrange = 300f;
 
     private Transform target;
     private float collisionDistance = 1f;
@@ -43,9 +45,14 @@ public class MissileScript : MonoBehaviour
         }
         else
         {
-            //TODO: search new nearest target, if none, then explode
-            Explode();
-            return;
+            //search for new target if current one is destroyed
+            UpdateTarget();
+            //if no target is found, then explode
+            if (target == null)
+            {
+                Explode();
+                return;
+            }
         }
     }
 
@@ -73,6 +80,33 @@ public class MissileScript : MonoBehaviour
         GameObject fireParticles = Instantiate(explosionVisual, transform.position, transform.rotation);
         Destroy(fireParticles, 1f);
         Destroy(gameObject);
+    }
+
+    void UpdateTarget()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+
+        //TODO: use physics.raycast to check that turret has a visual to enemy (planet or moon wont obstruct its view)
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+
+        if (nearestEnemy != null && shortestDistance <= newTargetSearchrange)
+        {
+            target = nearestEnemy.transform;
+        }
+        else
+        {
+            target = null;
+        }
     }
 }
 

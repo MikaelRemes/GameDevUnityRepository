@@ -4,8 +4,7 @@ public class DeathLaserScript : MonoBehaviour
 {
     [Header("Attributes")]
     public float range = 300f;
-    public float fireRatePerSec = 0.5f;
-    public int laserDamage = 1000;
+    public int laserDamagePerSec = 100;
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";
@@ -15,6 +14,7 @@ public class DeathLaserScript : MonoBehaviour
 
     private Transform target;
     private float fireCountDown = 0f;
+    private float fireUpdateRate = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,10 +49,10 @@ public class DeathLaserScript : MonoBehaviour
         }
     }
 
-    void Shoot(Transform target)
+    void Shoot(Transform target, float laserDamage)
     {
         GameObject enemy = target.gameObject;
-        enemy.GetComponent<EnemyAIScript>().takeDamage(laserDamage);
+        enemy.GetComponent<EnemyAIScript>().takeDamage((int)laserDamage);
         
         laserEffect.SetPosition(0, firePoint.position);
         laserEffect.SetPosition(1, target.position);
@@ -77,8 +77,8 @@ public class DeathLaserScript : MonoBehaviour
 
             if (fireCountDown <= 0)
             {
-                Shoot(target);
-                fireCountDown = 1f / fireRatePerSec;
+                Shoot(target, laserDamagePerSec  * Time.deltaTime);
+                fireCountDown = 1f / fireUpdateRate;
             }
 
             fireCountDown -= Time.deltaTime;
