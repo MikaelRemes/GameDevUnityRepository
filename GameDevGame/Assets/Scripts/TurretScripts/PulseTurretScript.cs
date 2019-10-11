@@ -1,20 +1,21 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class DeathLaserScript : MonoBehaviour
+public class PulseTurretScript : MonoBehaviour
 {
     [Header("Attributes")]
-    public float range = 300f;
-    public float laserDamagePerSec = 50f;
+    public float range = 60f;
+    public float pulseDamage = 10f;
+    public float fireRatePerSec = 0.20f;
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";
-    public Transform rotateAxis;
     public Transform firePoint;
-    public LineRenderer laserEffect;
+    public GameObject pulseEffect;
 
     private Transform target;
     private float fireCountDown = 0f;
-    private float fireUpdateRate = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,6 @@ public class DeathLaserScript : MonoBehaviour
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
-        //TODO: use physics.raycast to check that turret has a visual to enemy (planet or moon wont obstruct its view)
         foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
@@ -49,19 +49,21 @@ public class DeathLaserScript : MonoBehaviour
         }
     }
 
-    void Shoot(Transform target, float laserDamage)
+    void Shoot(Transform target)
     {
-        GameObject enemy = target.gameObject;
-        enemy.GetComponent<EnemyAIScript>().takeDamage(laserDamage);
-        
-        laserEffect.SetPosition(0, firePoint.position);
-        laserEffect.SetPosition(1, target.position);
-    }
+        Collider[] objectsHit = Physics.OverlapSphere(firePoint.position, range);
 
-    public void resetLaser()
-    {
-        laserEffect.SetPosition(0, firePoint.position);
-        laserEffect.SetPosition(1, firePoint.position);
+        foreach (Collider c in objectsHit)
+        {
+            if (c.tag.Equals(enemyTag))
+            {
+                GameObject enemy = c.gameObject;
+                enemy.GetComponent<EnemyAIScript>().takeDamage(pulseDamage);
+            }
+        }
+
+        GameObject fireParticles = Instantiate(pulseEffect, transform.position, transform.rotation);
+        Destroy(fireParticles, 1f);
     }
 
     // Update is called once per frame
@@ -69,20 +71,15 @@ public class DeathLaserScript : MonoBehaviour
     {
         if (target != null)
         {
-            Vector3 directionOfEnemy = target.position - transform.position;
-            Quaternion lookDirection = Quaternion.LookRotation(directionOfEnemy);
-            rotateAxis.rotation = lookDirection;
-
 
             if (fireCountDown <= 0)
             {
-                Shoot(target, laserDamagePerSec * Time.deltaTime);
-                fireCountDown = 1f / fireUpdateRate;
+                Shoot(target);
+                fireCountDown = 1f / fireRatePerSec;
             }
 
             fireCountDown -= Time.deltaTime;
 
         }
-        else resetLaser();
     }
 }

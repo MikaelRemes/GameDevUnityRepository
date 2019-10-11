@@ -3,7 +3,7 @@
 public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed = 150f;
-    public int bulletDamage = 5;
+    public float bulletDamage = 5f;
 
     private Transform target;
 

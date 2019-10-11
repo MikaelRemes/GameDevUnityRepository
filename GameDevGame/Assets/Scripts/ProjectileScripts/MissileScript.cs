@@ -6,8 +6,8 @@ public class MissileScript : MonoBehaviour
     public float missileSpeed = 35f;
     public float missileAcceleration = 20f;
     public float explosionRadius = 20f;
-    public int missileDirectDamage = 25;
-    public int missileAoeDamage = 25;
+    public float missileDirectDamage = 25f;
+    public float missileAoeDamage = 25f;
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";

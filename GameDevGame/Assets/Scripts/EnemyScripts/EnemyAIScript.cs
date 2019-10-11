@@ -7,11 +7,14 @@ public class EnemyAIScript : MonoBehaviour
     [Header("Attributes")]
     public GameObject targetPlanet;
     public float moveSpeed=20f;
-    public int hitPoints = 10;
+    public float hitPoints = 10f;
     public int moneyReward = 10;
 
     [Header("Setup fields")]
     public float collisionDistance = 10f;
+
+    private float slowedSpeedPrentage = 1f;
+    private float slowCountDown = 0f;
 
     void Start()
     {
@@ -24,6 +27,13 @@ public class EnemyAIScript : MonoBehaviour
         //move enemy towards player at speed x
         Vector3 direction = targetPlanet.transform.position - transform.position;
         float distanceToMove = moveSpeed * Time.deltaTime;
+
+        //if enemy is slowed, reduce ms
+        if(slowCountDown > 0)
+        {
+            distanceToMove = distanceToMove * slowedSpeedPrentage;
+        }
+        slowCountDown -= Time.deltaTime;
 
         if (direction.magnitude - collisionDistance <= distanceToMove)
         {
@@ -42,13 +52,19 @@ public class EnemyAIScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void takeDamage(int Damage)
+    public void takeDamage(float Damage)
     {
         hitPoints -= Damage;
         if (hitPoints <= 0)
         {
             die();
         }
+    }
+
+    public void slow(float duration, float prentageAmount)
+    {
+        if(prentageAmount < 1f) slowedSpeedPrentage = 1f - prentageAmount;
+        slowCountDown = duration;
     }
 
     public void die()
