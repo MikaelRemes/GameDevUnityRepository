@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - ShopButton
   - Moon
+  - Mothership
   layers:
   - Default
   - TransparentFX

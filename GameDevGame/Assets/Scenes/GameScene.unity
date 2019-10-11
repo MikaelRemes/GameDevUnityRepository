@@ -145,7 +145,7 @@ RectTransform:
   m_Children:
   - {fileID: 2128624973}
   m_Father: {fileID: 648306078}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 3304652521911222847, guid: 97f0f2faa5ee361438e2bee3a98c90b4,
     type: 3}
-  cost: 250
+  cost: 300
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!1 &26981755
@@ -290,11 +290,11 @@ RectTransform:
   m_Children:
   - {fileID: 330584026}
   m_Father: {fileID: 648306078}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 90}
+  m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &26981757
@@ -399,7 +399,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 7527841529044886888, guid: 5492fcc856cb56c489ade67ccaa760a9,
     type: 3}
-  cost: 100
+  cost: 150
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!1 &57443976
@@ -661,7 +661,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy pulse turret (50)
+  m_Text: Buy pulse turret (40)
 --- !u!222 &240033955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy missile turret (100)
+  m_Text: Buy missile turret (150)
 --- !u!222 &330584028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -824,76 +824,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330584025}
   m_CullTransparentMesh: 0
---- !u!1001 &371983188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1685192362}
-    m_Modifications:
-    - target: {fileID: 8947127859001199927, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyMotherShip
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -320
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8720107199262133092, guid: ac858868537fd7b40b3e8f6ef8584a3c, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: ac858868537fd7b40b3e8f6ef8584a3c, type: 3}
 --- !u!1 &383832528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,10 +1062,10 @@ RectTransform:
   m_Children:
   - {fileID: 1424952034}
   - {fileID: 1564747686}
-  - {fileID: 26981756}
-  - {fileID: 21856357}
   - {fileID: 1665136367}
   - {fileID: 1029855889}
+  - {fileID: 26981756}
+  - {fileID: 21856357}
   m_Father: {fileID: 983918317}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1428,8 +1358,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826fa3b870ece7d4088780025a85b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyShips: {fileID: 1685192361}
+  enemyMotherShip: {fileID: 8947127859001199927, guid: ac858868537fd7b40b3e8f6ef8584a3c,
+    type: 3}
+  enemyMotherShipSpawns:
+  - {x: -320, y: 0, z: 0}
+  - {x: 0, y: 250, z: 250}
+  - {x: 100, y: -200, z: -100}
   enemyTag: Enemy
+  mothershipTag: Mothership
   childText: {fileID: 1141305011}
   inTheMiddleOfWaveText: WAVE INCOMING!
   startWaveText: START WAVE
@@ -1569,11 +1505,11 @@ RectTransform:
   m_Children:
   - {fileID: 1354750514}
   m_Father: {fileID: 648306078}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 120}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1029855890
@@ -2773,7 +2709,7 @@ RectTransform:
   m_Children:
   - {fileID: 240033953}
   m_Father: {fileID: 648306078}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2796,7 +2732,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 8323897695821319086, guid: 49227d24e6be1e649b65af03134ba4b0,
     type: 3}
-  cost: 50
+  cost: 40
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!114 &1665136369
@@ -2885,62 +2821,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665136366}
   m_CullTransparentMesh: 0
---- !u!1 &1678598334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8947127859001199927, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-    type: 3}
-  m_PrefabInstance: {fileID: 371983188}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1678598335 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8947127859001199923, guid: ac858868537fd7b40b3e8f6ef8584a3c,
-    type: 3}
-  m_PrefabInstance: {fileID: 371983188}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1678598336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678598334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecfefe3bda287b443983d02a8eec62ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
---- !u!1 &1685192361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1685192362}
-  m_Layer: 0
-  m_Name: EnemyShips
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1685192362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685192361}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1678598335}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836383011
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3000,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy death laser (250)
+  m_Text: Buy death laser (300)
 --- !u!222 &2128624975
 CanvasRenderer:
   m_ObjectHideFlags: 0

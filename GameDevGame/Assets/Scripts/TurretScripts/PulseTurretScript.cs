@@ -7,7 +7,7 @@ public class PulseTurretScript : MonoBehaviour
     [Header("Attributes")]
     public float range = 60f;
     public float pulseDamage = 10f;
-    public float fireRatePerSec = 0.20f;
+    public float fireRatePerSec = 0.7f;
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";

@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 60
   pulseDamage: 10
-  fireRatePerSec: 0.2
+  fireRatePerSec: 0.7
   enemyTag: Enemy
   firePoint: {fileID: 9146825806261914891}
   pulseEffect: {fileID: 5729863782953753747, guid: 11b3661bdb3a2744eb903e88affe4b7a,

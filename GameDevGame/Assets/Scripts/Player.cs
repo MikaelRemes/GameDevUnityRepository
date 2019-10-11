@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     //Stored global variables
-    public static int HP=100;
+    public static int HP=10;
     public static int monies=100;
     public static int wave=1;
 

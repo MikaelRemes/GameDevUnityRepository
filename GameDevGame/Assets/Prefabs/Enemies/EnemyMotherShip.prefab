@@ -4713,7 +4713,7 @@ GameObject:
   - component: {fileID: 8720107199262133092}
   m_Layer: 0
   m_Name: EnemyMotherShip
-  m_TagString: Untagged
+  m_TagString: Mothership
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4794,7 +4794,9 @@ MonoBehaviour:
     type: 3}
   spikerEnemy: {fileID: 3141604689190670079, guid: c16bbbc0786d3284d9c918ac92b8a7a9,
     type: 3}
-  enemySpawnDelay: 1
+  superUfoEnemy: {fileID: 2438947260381041814, guid: ecef08a9bd076d8439223b41dab1e198,
+    type: 3}
+  enemySpawnDelay: 0.8
 --- !u!114 &8720107199262133092
 MonoBehaviour:
   m_ObjectHideFlags: 0

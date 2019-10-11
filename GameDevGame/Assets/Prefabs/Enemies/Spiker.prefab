@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
-  moveSpeed: 30
-  hitPoints: 50
-  moneyReward: 100
+  moveSpeed: 50
+  hitPoints: 25
+  moneyReward: 20
   collisionDistance: 10
