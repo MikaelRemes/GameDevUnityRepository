@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
-  moveSpeed: 15
-  hitPoints: 500
+  moveSpeed: 10
+  hitPoints: 1000
   moneyReward: 150
+  playerDamage: 5
   collisionDistance: 10
 --- !u!135 &5636783087526250184
 SphereCollider:

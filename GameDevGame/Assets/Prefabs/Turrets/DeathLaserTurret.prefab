@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 300
-  laserDamagePerSec: 50
+  laserDamagePerSec: 80
   enemyTag: Enemy
   rotateAxis: {fileID: 752098032176734432}
   firePoint: {fileID: 752098032176734432}

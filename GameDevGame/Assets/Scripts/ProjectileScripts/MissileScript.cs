@@ -5,7 +5,7 @@ public class MissileScript : MonoBehaviour
     [Header("Attributes")]
     public float missileSpeed = 35f;
     public float missileAcceleration = 20f;
-    public float explosionRadius = 20f;
+    public float explosionRadius = 30f;
     public float missileDirectDamage = 25f;
     public float missileAoeDamage = 25f;
 

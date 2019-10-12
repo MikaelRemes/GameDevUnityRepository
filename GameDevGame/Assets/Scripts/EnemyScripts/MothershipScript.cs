@@ -4,6 +4,7 @@ public class MothershipScript : MonoBehaviour
 {
     public GameObject ufoEnemy;
     public GameObject spikerEnemy;
+    public GameObject stealthEnemy;
     public GameObject superUfoEnemy;
     public float enemySpawnDelay = 0.8f;
 
@@ -21,6 +22,13 @@ public class MothershipScript : MonoBehaviour
         Debug.Log("Spawned spiker enemy");
     }
 
+    void SpawnStealthEnemy()
+    {
+        GameObject currentEnemy = Instantiate(stealthEnemy);
+        currentEnemy.transform.position = gameObject.transform.position;
+        Debug.Log("Spawned stealth enemy");
+    }
+
     void SpawnSuperUfoEnemy()
     {
         GameObject currentEnemy = Instantiate(superUfoEnemy);
@@ -28,7 +36,7 @@ public class MothershipScript : MonoBehaviour
         Debug.Log("Spawned super ufo enemy");
     }
 
-    public void SpawnEnemiesFromShip(int ufoEnemyNum, int spikerEnemyNum, int SuperUfoEnemyNum)
+    public void SpawnEnemiesFromShip(int ufoEnemyNum, int spikerEnemyNum, int stealthEnemyNum, int SuperUfoEnemyNum)
     {
         for (int i = 0; i < ufoEnemyNum; i++)
         {
@@ -38,13 +46,17 @@ public class MothershipScript : MonoBehaviour
         {
             Invoke("SpawnSpikerEnemy", enemySpawnDelay * i + 0.15f);
         }
+        for (int i = 0; i < stealthEnemyNum; i++)
+        {
+            Invoke("SpawnStealthEnemy", enemySpawnDelay * i + 0.25f);
+        }
         for (int i = 0; i < SuperUfoEnemyNum; i++)
         {
             Invoke("SpawnSuperUfoEnemy", enemySpawnDelay * i + 0.3f);
         }
     }
 
-    public void QuickSpawnEnemiesFromShip(int ufoEnemyNum, int spikerEnemyNum, int SuperUfoEnemyNum)
+    public void QuickSpawnEnemiesFromShip(int ufoEnemyNum, int spikerEnemyNum, int stealthEnemyNum, int SuperUfoEnemyNum)
     {
         for (int i = 0; i < ufoEnemyNum; i++)
         {
@@ -54,9 +66,13 @@ public class MothershipScript : MonoBehaviour
         {
             Invoke("SpawnSpikerEnemy", enemySpawnDelay * i / 2 + 0.05f);
         }
+        for (int i = 0; i < stealthEnemyNum; i++)
+        {
+            Invoke("SpawnStealthEnemy", enemySpawnDelay * i / 2 + 0.1f);
+        }
         for (int i = 0; i < SuperUfoEnemyNum; i++)
         {
-            Invoke("SpawnSuperUfoEnemy", enemySpawnDelay * i / 2 + 0.1f);
+            Invoke("SpawnSuperUfoEnemy", enemySpawnDelay * i / 2 + 0.15f);
         }
     }
 }

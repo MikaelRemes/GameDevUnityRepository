@@ -4,7 +4,7 @@ public class DeathLaserScript : MonoBehaviour
 {
     [Header("Attributes")]
     public float range = 300f;
-    public float laserDamagePerSec = 50f;
+    public float laserDamagePerSec = 80f;
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";

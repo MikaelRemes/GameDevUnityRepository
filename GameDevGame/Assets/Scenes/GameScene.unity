@@ -399,7 +399,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 7527841529044886888, guid: 5492fcc856cb56c489ade67ccaa760a9,
     type: 3}
-  cost: 150
+  cost: 120
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!1 &57443976
@@ -661,7 +661,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy pulse turret (40)
+  m_Text: Buy pulse turret (50)
 --- !u!222 &240033955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy cannon turret (25)
+  m_Text: Buy cannon turret (40)
 --- !u!222 &328859243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy missile turret (150)
+  m_Text: Buy missile turret (120)
 --- !u!222 &330584028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 6112352980843510717, guid: b6b97515b9158c047953852b7e862d74,
     type: 3}
-  cost: 125
+  cost: 100
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!114 &1029855891
@@ -1968,7 +1968,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy freeze laser (125)
+  m_Text: Buy freeze laser (100)
 --- !u!222 &1354750516
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2425,7 +2425,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 303049670713373032, guid: 3d5c97f2a8aa8ab4982aa091bd5812a4,
     type: 3}
-  cost: 25
+  cost: 40
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!1 &1575315865
@@ -2732,7 +2732,7 @@ MonoBehaviour:
   moonTag: Moon
   basicTurret: {fileID: 8323897695821319086, guid: 49227d24e6be1e649b65af03134ba4b0,
     type: 3}
-  cost: 40
+  cost: 50
   cameraView: {fileID: 534669904}
   shopButtonTag: ShopButton
 --- !u!114 &1665136369

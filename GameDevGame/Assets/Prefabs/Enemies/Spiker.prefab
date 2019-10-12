@@ -134,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 3051141731686372805}
   m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4474187544103898258}
   m_RootOrder: 0
@@ -256,7 +256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlanet: {fileID: 0}
-  moveSpeed: 50
+  moveSpeed: 30
   hitPoints: 25
   moneyReward: 20
+  playerDamage: 1
   collisionDistance: 10

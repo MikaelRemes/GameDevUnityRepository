@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyAIScript : MonoBehaviour
 {
     [Header("Attributes")]
-    public GameObject targetPlanet;
     public float moveSpeed=20f;
     public float hitPoints = 10f;
     public int moneyReward = 10;
+    public int playerDamage = 1;
 
     [Header("Setup fields")]
+    public GameObject targetPlanet;
     public float collisionDistance = 10f;
 
     private float slowedSpeedPrentage = 1f;
@@ -28,8 +29,12 @@ public class EnemyAIScript : MonoBehaviour
         Vector3 direction = targetPlanet.transform.position - transform.position;
         float distanceToMove = moveSpeed * Time.deltaTime;
 
+        //enemy head towards enemy
+        Quaternion lookDirection = Quaternion.LookRotation(direction);
+        transform.rotation = lookDirection;
+
         //if enemy is slowed, reduce ms
-        if(slowCountDown > 0)
+        if (slowCountDown > 0)
         {
             distanceToMove = distanceToMove * slowedSpeedPrentage;
         }
@@ -47,7 +52,7 @@ public class EnemyAIScript : MonoBehaviour
     
     void HitPlayer()
     {
-        Player.HP -= 1;
+        Player.HP -= playerDamage;
         Debug.Log("Enemy hit player");
         Destroy(gameObject);
     }

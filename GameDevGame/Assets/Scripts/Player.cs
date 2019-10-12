@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     void UpdateTextBoxes()
     {
         hpText.text = "Planet HP: " + HP;
-        waveText.text = "Wave: " + wave;
+        waveText.text = "Wave: " + (wave-1);
         moniesText.text = "Money: " + monies;
     }
 }

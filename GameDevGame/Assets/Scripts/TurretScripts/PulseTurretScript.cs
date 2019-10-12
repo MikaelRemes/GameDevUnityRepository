@@ -5,7 +5,7 @@ using UnityEngine;
 public class PulseTurretScript : MonoBehaviour
 {
     [Header("Attributes")]
-    public float range = 60f;
+    public float range = 75f;
     public float pulseDamage = 10f;
     public float fireRatePerSec = 0.7f;
 
