@@ -46,11 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b828df839d30d4ca015f15a219888a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlanet: {fileID: 0}
   moveSpeed: 20
   hitPoints: 15
   moneyReward: 10
-  collisionDistance: 10
+  playerDamage: 1
+  targetPlanet: {fileID: 0}
+  collisionDistance: 21
+  explosionEffect: {fileID: 4394887033956546421, guid: a420393bec545e94f8a83bcb2d390a5a,
+    type: 3}
 --- !u!135 &5636783087526250184
 SphereCollider:
   m_ObjectHideFlags: 0

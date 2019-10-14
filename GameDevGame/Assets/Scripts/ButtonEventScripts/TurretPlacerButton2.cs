@@ -9,6 +9,7 @@ public class TurretPlacerButton2 : MonoBehaviour
     
     public string planetTag = "Planet";
     public string moonTag="Moon";
+    public string turretTag = "Turret";
     public GameObject basicTurret;
     public int cost=25;
     public Camera cameraView;
@@ -70,13 +71,21 @@ public class TurretPlacerButton2 : MonoBehaviour
                     //TODO: check if enough monies
                     //TODO: disable placement of turrets on top of one another
                     GameObject objectHit = hit.collider.gameObject;
-                    if (objectHit.tag.Equals(planetTag))
+                    if (objectHit.tag.Equals(turretTag))
+                    {
+                        Debug.Log("Cannot place a turret on another one.");
+                    }
+                    else if (objectHit.tag.Equals(planetTag) && Player.monies >= cost)
                     {
                         placeTurret(hit.point, hit.normal, objectHit);
                     }
-                    else if (objectHit.tag.Equals(moonTag))
+                    else if (objectHit.tag.Equals(moonTag) && Player.monies >= cost)
                     {
                         placeTurret(hit.point, hit.normal, objectHit);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough money or incorrect position");
                     }
                 }
             }

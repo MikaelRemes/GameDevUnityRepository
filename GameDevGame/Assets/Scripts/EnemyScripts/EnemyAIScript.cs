@@ -16,6 +16,7 @@ public class EnemyAIScript : MonoBehaviour
 
     private float slowedSpeedPrentage = 1f;
     private float slowCountDown = 0f;
+    public GameObject explosionEffect;
 
     void Start()
     {
@@ -54,6 +55,8 @@ public class EnemyAIScript : MonoBehaviour
     {
         Player.HP -= playerDamage;
         Debug.Log("Enemy hit player");
+        GameObject explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(explosion, 1f);
         Destroy(gameObject);
     }
 

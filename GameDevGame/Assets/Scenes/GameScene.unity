@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.053389944, g: 0.15094802, b: 0.19478062, a: 1}
+  m_IndirectSpecularColor: {r: 0.05339195, g: 0.15094897, b: 0.19478199, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetTag: Planet
   moonTag: Moon
+  turretTag: Turret
   basicTurret: {fileID: 3304652521911222847, guid: 97f0f2faa5ee361438e2bee3a98c90b4,
     type: 3}
   cost: 300
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetTag: Planet
   moonTag: Moon
+  turretTag: Turret
   basicTurret: {fileID: 7527841529044886888, guid: 5492fcc856cb56c489ade67ccaa760a9,
     type: 3}
   cost: 120
@@ -1009,7 +1011,7 @@ Transform:
   m_GameObject: {fileID: 614111650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1526,6 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetTag: Planet
   moonTag: Moon
+  turretTag: Turret
   basicTurret: {fileID: 6112352980843510717, guid: b6b97515b9158c047953852b7e862d74,
     type: 3}
   cost: 100
@@ -2423,6 +2426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetTag: Planet
   moonTag: Moon
+  turretTag: Turret
   basicTurret: {fileID: 303049670713373032, guid: 3d5c97f2a8aa8ab4982aa091bd5812a4,
     type: 3}
   cost: 40
@@ -2730,6 +2734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetTag: Planet
   moonTag: Moon
+  turretTag: Turret
   basicTurret: {fileID: 8323897695821319086, guid: 49227d24e6be1e649b65af03134ba4b0,
     type: 3}
   cost: 50
