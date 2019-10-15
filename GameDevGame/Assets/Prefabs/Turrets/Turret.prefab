@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6592254389049686093}
   - component: {fileID: 4279070547283575318}
   - component: {fileID: 4649961642132309275}
-  - component: {fileID: 33131359428702608}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Turret
@@ -126,14 +125,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300002, guid: fb9d5a87f4e06a2449e0939a784a004e, type: 3}
---- !u!33 &33131359428702608
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303049670713373032}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &489751131521482823
 GameObject:
   m_ObjectHideFlags: 0
