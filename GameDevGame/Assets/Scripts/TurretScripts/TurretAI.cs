@@ -11,6 +11,7 @@ public class TurretAI : MonoBehaviour
 
     [Header("Setup fields")]
     public string enemyTag = "Enemy";
+    public string planetTag = "Planet";
     public Transform rotateAxis;
     public GameObject bullet;
     public Transform firePoint;
@@ -29,15 +30,22 @@ public class TurretAI : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
-
-        //TODO: use physics.raycast to check that turret has a visual to enemy (planet or moon wont obstruct its view)
+        
         foreach(GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy < shortestDistance)
             {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
+                //check that planet doesn't obstruct the view to enemy
+                //RaycastHit hit;
+                //if (Physics.Raycast(firePoint.position,enemy.transform.position, out hit))
+                //{
+                    //if (!hit.collider.tag.Equals(planetTag))
+                    //{
+                        shortestDistance = distanceToEnemy;
+                        nearestEnemy = enemy;
+                    //}
+                //}
             }
         }
 
@@ -61,8 +69,7 @@ public class TurretAI : MonoBehaviour
         GameObject fireParticles = Instantiate(fireEffect, firePoint.position, Quaternion.LookRotation(target.position - transform.position));
         Destroy(fireParticles, 1f);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if(target != null)

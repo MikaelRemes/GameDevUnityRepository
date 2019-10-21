@@ -13,10 +13,17 @@ public class EnemyAIScript : MonoBehaviour
     [Header("Setup fields")]
     public GameObject targetPlanet;
     public float collisionDistance = 10f;
+    public GameObject explosionEffect;
+
+    [Header("Setup fields for ufo spawner")]
+    public bool spawnUfoAttackers = false;
+    public float spawnUfoRate = 1.5f;
+    public GameObject ufoAttacker;
+    public GameObject spawnUfoEffect;
 
     private float slowedSpeedPrentage = 1f;
     private float slowCountDown = 0f;
-    public GameObject explosionEffect;
+    private float spawnUfoCountDown = 3f;
 
     void Start()
     {
@@ -40,6 +47,16 @@ public class EnemyAIScript : MonoBehaviour
             distanceToMove = distanceToMove * slowedSpeedPrentage;
         }
         slowCountDown -= Time.deltaTime;
+
+        if (spawnUfoAttackers) {
+            //spawn ufo every x seconds
+            if (spawnUfoCountDown < 0)
+            {
+                spawnUfoCountDown = spawnUfoRate;
+                SpawnUfoAttacker();
+            }
+            spawnUfoCountDown -= Time.deltaTime;
+        }
 
         if (direction.magnitude - collisionDistance <= distanceToMove)
         {
@@ -79,5 +96,15 @@ public class EnemyAIScript : MonoBehaviour
     {
         Player.monies += moneyReward;
         Destroy(gameObject);
+    }
+
+    private void SpawnUfoAttacker()
+    {
+        GameObject currentEnemy = Instantiate(ufoAttacker);
+        GameObject effectSpawn = Instantiate(spawnUfoEffect);
+        //spawns ufo attacker in a random position near enemy
+        Vector3 positionOfUfo = Random.insideUnitSphere * 25 + gameObject.transform.position;
+        currentEnemy.transform.position = positionOfUfo;
+        effectSpawn.transform.position = positionOfUfo;
     }
 }
