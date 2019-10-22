@@ -53,7 +53,7 @@ public class TurretPlacerButton2 : MonoBehaviour
 
     public void EnableTurretPlacement()
     {
-        GetComponent<Image>().color = Color.green;
+        GetComponent<Image>().color = new Color(0.25f,0.9f,1f);
         placingTurret = true;
     }
 
@@ -69,7 +69,6 @@ public class TurretPlacerButton2 : MonoBehaviour
                 {
                     //POSSIBLE TODO: ignore moon if planet is hit or vice versa
                     //TODO: check if enough monies
-                    //TODO: disable placement of turrets on top of one another
                     GameObject objectHit = hit.collider.gameObject;
                     if (objectHit.tag.Equals(turretTag))
                     {
