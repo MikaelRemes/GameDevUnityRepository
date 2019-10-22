@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303049670713470280}
   - component: {fileID: 303049670722716320}
-  - component: {fileID: 6592254389049686093}
+  - component: {fileID: 114847219892658504}
   - component: {fileID: 4279070547283575318}
   - component: {fileID: 4649961642132309275}
   m_Layer: 0
@@ -54,7 +54,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6592254389049686093
+--- !u!114 &114847219892658504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,12 +68,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 150
   fireRatePerSec: 1
-  enemyTag: Enemy
-  rotateAxis: {fileID: 2507225256901360282}
+  damage: 5
+  bulletTurret: 1
   bullet: {fileID: 6732353736341421321, guid: 8fbc8695748f10f49bfec0e666cf4eb0, type: 3}
+  missileTurret: 0
+  missile: {fileID: 0}
+  pulseTurret: 0
+  pulseDamage: 10
+  freezeTurret: 0
+  slowDuration: 1.5
+  slowPrentageAmount: 0.5
+  DeathLaserTurret: 0
+  enemyTag: Enemy
+  planetTag: Planet
+  rotateAxis: {fileID: 2507225256901360282}
   firePoint: {fileID: 916941974997473404}
   fireEffect: {fileID: 8618325853932239215, guid: a9d0beac18ec5114fa2819898628c017,
     type: 3}
+  laserEffect: {fileID: 0}
 --- !u!23 &4279070547283575318
 MeshRenderer:
   m_ObjectHideFlags: 0

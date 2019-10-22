@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 877156284475777262}
   - component: {fileID: 3660406380547200306}
   - component: {fileID: 8111851226544988698}
-  - component: {fileID: 7191744008121981358}
+  - component: {fileID: 2333134498337889827}
   m_Layer: 0
   m_Name: PulseTurret
   m_TagString: Turret
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7191744008121981358
+--- !u!114 &2333134498337889827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,13 +101,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 8323897695821319086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a25a2deed62d24185eb8fa72aa4bbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   range: 75
-  pulseDamage: 10
   fireRatePerSec: 0.7
+  damage: 10
+  bulletTurret: 0
+  bullet: {fileID: 0}
+  missileTurret: 0
+  missile: {fileID: 0}
+  aoeDamage: 0
+  pulseTurret: 1
+  freezeTurret: 0
+  slowDuration: 0
+  slowPrentageAmount: 0
+  DeathLaserTurret: 0
   enemyTag: Enemy
+  planetTag: Planet
+  rotateAxis: {fileID: 9146825806261914891}
   firePoint: {fileID: 9146825806261914891}
-  pulseEffect: {fileID: 5729863782953753747, guid: 11b3661bdb3a2744eb903e88affe4b7a,
+  fireEffect: {fileID: 5729863782953753747, guid: 11b3661bdb3a2744eb903e88affe4b7a,
     type: 3}
+  laserEffect: {fileID: 0}

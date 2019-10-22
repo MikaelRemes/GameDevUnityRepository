@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2479210995812306122}
   - component: {fileID: 2148650709267088405}
   - component: {fileID: 4454456593348130567}
-  - component: {fileID: 868847075125127253}
   - component: {fileID: 5850475302038672145}
+  - component: {fileID: 2390645916987776139}
   m_Layer: 0
   m_Name: DeathLaserTurret
   m_TagString: Turret
@@ -93,24 +93,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &868847075125127253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3304652521911222847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae17f913d9331f4f8bd13aff382e887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 300
-  laserDamagePerSec: 80
-  enemyTag: Enemy
-  rotateAxis: {fileID: 752098032176734432}
-  firePoint: {fileID: 752098032176734432}
-  laserEffect: {fileID: 5850475302038672145}
 --- !u!120 &5850475302038672145
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -206,3 +188,34 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2390645916987776139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304652521911222847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 300
+  fireRatePerSec: 20
+  damage: 4
+  bulletTurret: 0
+  bullet: {fileID: 0}
+  missileTurret: 0
+  missile: {fileID: 0}
+  aoeDamage: 0
+  pulseTurret: 0
+  freezeTurret: 0
+  slowDuration: 0
+  slowPrentageAmount: 0
+  DeathLaserTurret: 1
+  enemyTag: Enemy
+  planetTag: Planet
+  rotateAxis: {fileID: 752098032176734432}
+  firePoint: {fileID: 752098032176734432}
+  fireEffect: {fileID: 0}
+  laserEffect: {fileID: 5850475302038672145}

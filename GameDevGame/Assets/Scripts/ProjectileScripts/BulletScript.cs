@@ -2,7 +2,7 @@
 
 public class BulletScript : MonoBehaviour
 {
-    public float bulletSpeed = 150f;
+    public float bulletSpeed = 200f;
     public float bulletDamage = 5f;
 
     private Transform target;
@@ -10,6 +10,10 @@ public class BulletScript : MonoBehaviour
     public void setTargetTo(Transform _target)
     {
         target = _target;
+    }
+    public void setDamage(float damage)
+    {
+        bulletDamage = damage;
     }
     
     void Update()

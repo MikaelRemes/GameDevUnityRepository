@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4067421211464860010}
   - component: {fileID: 7621129798149240311}
   - component: {fileID: 7970576899397106205}
-  - component: {fileID: 2351817691883255223}
   - component: {fileID: 212479418715082262}
+  - component: {fileID: 7240606786254731835}
   m_Layer: 0
   m_Name: FrostLaserTurret
   m_TagString: Turret
@@ -94,27 +94,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2351817691883255223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6112352980843510717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9f5123e343e6042824ef2e88d97921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 300
-  laserDamage: 5
-  fireRatePerSec: 0.5
-  slowDuration: 1.5
-  slowPrentageAmount: 0.5
-  enemyTag: Enemy
-  rotateAxis: {fileID: 6652663876886952465}
-  firePoint: {fileID: 6652663876886952465}
-  laserEffect: {fileID: 212479418715082262}
 --- !u!120 &212479418715082262
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -210,3 +189,34 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &7240606786254731835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112352980843510717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 300
+  fireRatePerSec: 10
+  damage: 0
+  bulletTurret: 0
+  bullet: {fileID: 0}
+  missileTurret: 0
+  missile: {fileID: 0}
+  aoeDamage: 0
+  pulseTurret: 0
+  freezeTurret: 1
+  slowDuration: 1
+  slowPrentageAmount: 0.5
+  DeathLaserTurret: 0
+  enemyTag: Enemy
+  planetTag: Planet
+  rotateAxis: {fileID: 6652663876886952465}
+  firePoint: {fileID: 6652663876886952465}
+  fireEffect: {fileID: 0}
+  laserEffect: {fileID: 212479418715082262}

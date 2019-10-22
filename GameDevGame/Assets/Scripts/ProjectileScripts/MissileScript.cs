@@ -21,6 +21,11 @@ public class MissileScript : MonoBehaviour
     {
         target = _target;
     }
+    public void setDamage(float directDamage, float aoeDamage)
+    {
+        missileDirectDamage = directDamage;
+        missileAoeDamage = aoeDamage;
+    }
 
     void Update()
     {
