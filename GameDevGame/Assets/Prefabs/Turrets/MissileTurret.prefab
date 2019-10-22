@@ -104,7 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 300
+  turretName: Missile Turret
+  range: 200
   fireRatePerSec: 0.25
   damage: 25
   bulletTurret: 0
@@ -117,6 +118,12 @@ MonoBehaviour:
   slowDuration: 1.5
   slowPrentageAmount: 0.5
   DeathLaserTurret: 0
+  upgradeName1: Long-range scanners
+  upgradeCost1: 25
+  upgradeName2: Not defined
+  upgradeCost2: 0
+  upgradeName3: Not defined
+  upgradeCost3: 0
   enemyTag: Enemy
   planetTag: Planet
   rotateAxis: {fileID: 5093585409789295721}

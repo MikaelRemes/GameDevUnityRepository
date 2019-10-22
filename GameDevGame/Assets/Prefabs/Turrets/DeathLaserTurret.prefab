@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretName: Death Laser Turret
   range: 300
   fireRatePerSec: 20
   damage: 4
@@ -213,6 +214,12 @@ MonoBehaviour:
   slowDuration: 0
   slowPrentageAmount: 0
   DeathLaserTurret: 1
+  upgradeName1: Fusion core
+  upgradeCost1: 1000
+  upgradeName2: Not defined
+  upgradeCost2: 0
+  upgradeName3: Not defined
+  upgradeCost3: 0
   enemyTag: Enemy
   planetTag: Planet
   rotateAxis: {fileID: 752098032176734432}

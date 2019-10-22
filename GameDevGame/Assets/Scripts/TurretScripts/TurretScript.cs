@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretScript : MonoBehaviour
 {
     [Header("Basic Attributes")]
+    public string turretName = "Turret";
     public float range;
     public float fireRatePerSec;
     public float damage;
@@ -29,8 +30,15 @@ public class TurretScript : MonoBehaviour
     [Header("Death laser")]
     public bool DeathLaserTurret = false;
 
+    [Header("upgrade names")]
+    public string upgradeName1 = "Upgrade 1";
+    public int upgradeCost1 = 0;
+    public string upgradeName2 = "Upgrade 2";
+    public int upgradeCost2 = 0;
+    public string upgradeName3 = "Upgrade 3";
+    public int upgradeCost3 = 0;
 
-    [Header("Setup fields")]
+    [Header("Setup fields (ignore)")]
     public string enemyTag = "Enemy";
     public string planetTag = "Planet";
     public Transform rotateAxis;
@@ -40,6 +48,9 @@ public class TurretScript : MonoBehaviour
 
     private Transform target;
     private float fireCountDown = 0f;
+    private bool upgraded1 = false;
+    private bool upgraded2 = false;
+    private bool upgraded3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +92,7 @@ public class TurretScript : MonoBehaviour
 
     void Shoot(Transform target)
     {
+        //cannon turret
         if (bulletTurret)
         {
             GameObject thisBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
@@ -91,6 +103,8 @@ public class TurretScript : MonoBehaviour
                 bulletScript.setDamage(damage);
             }
         }
+
+        //missile turret
         else if (missileTurret)
         {
             GameObject thisMissile = Instantiate(missile, firePoint.position, firePoint.rotation);
@@ -101,6 +115,8 @@ public class TurretScript : MonoBehaviour
                 missileScript.setDamage(damage, aoeDamage);
             }
         }
+
+        //pulse turret
         else if (pulseTurret)
         {
             Collider[] objectsHit = Physics.OverlapSphere(firePoint.position, range);
@@ -109,6 +125,8 @@ public class TurretScript : MonoBehaviour
                 if (c.tag.Equals(enemyTag))c.gameObject.GetComponent<EnemyAIScript>().takeDamage(damage);
             }
         }
+
+        //freeze turret
         else if (freezeTurret)
         {
             GameObject enemy = target.gameObject;
@@ -118,6 +136,8 @@ public class TurretScript : MonoBehaviour
             laserEffect.SetPosition(0, firePoint.position);
             laserEffect.SetPosition(1, target.position);
         }
+
+        //death laser
         else if (DeathLaserTurret)
         {
             GameObject enemy = target.gameObject;
@@ -161,5 +181,102 @@ public class TurretScript : MonoBehaviour
             laserEffect.SetPosition(0, firePoint.position);
             laserEffect.SetPosition(1, firePoint.position);
         }
+    }
+    
+    //upgrades turret, returns cost
+    public int UpgradeTurret(int upgradeNum)
+    {
+        //cannon turret
+        if (bulletTurret)
+        {
+            if (upgradeNum == 1)
+            {
+                fireRatePerSec += 1;
+                return upgradeCost1;
+            }
+            if (upgradeNum == 2)
+            {
+                damage += 5;
+                return upgradeCost2;
+            }
+            if (upgradeNum == 3)
+            {
+                return upgradeCost3;
+            }
+        }
+
+        //missile turret
+        else if (missileTurret)
+        {
+            if (upgradeNum == 1)
+            {
+                range += 100;
+                return upgradeCost1;
+            }
+            if (upgradeNum == 2)
+            {
+                return upgradeCost2;
+            }
+            if (upgradeNum == 3)
+            {
+                return upgradeCost3;
+            }
+        }
+
+        //pulse turret
+        else if (pulseTurret)
+        {
+            if (upgradeNum == 1)
+            {
+                fireRatePerSec += 1;
+                return upgradeCost1;
+            }
+            if (upgradeNum == 2)
+            {
+                return upgradeCost2;
+            }
+            if (upgradeNum == 3)
+            {
+                return upgradeCost3;
+            }
+        }
+
+        //freeze turret
+        else if (freezeTurret)
+        {
+            if (upgradeNum == 1)
+            {
+                slowPrentageAmount += 0.25f;
+                return upgradeCost1;
+            }
+            if (upgradeNum == 2)
+            {
+                return upgradeCost2;
+            }
+            if (upgradeNum == 3)
+            {
+                return upgradeCost3;
+            }
+        }
+
+        //death laser
+        else if (DeathLaserTurret)
+        {
+            if (upgradeNum == 1)
+            {
+                damage += 16;
+                return upgradeCost1;
+            }
+            if (upgradeNum == 2)
+            {
+                return upgradeCost2;
+            }
+            if (upgradeNum == 3)
+            {
+                return upgradeCost3;
+            }
+        }
+
+        return 0;
     }
 }

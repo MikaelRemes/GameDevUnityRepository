@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretName: Cannon turret
   range: 150
   fireRatePerSec: 1
   damage: 5
@@ -73,12 +74,18 @@ MonoBehaviour:
   bullet: {fileID: 6732353736341421321, guid: 8fbc8695748f10f49bfec0e666cf4eb0, type: 3}
   missileTurret: 0
   missile: {fileID: 0}
+  aoeDamage: 0
   pulseTurret: 0
-  pulseDamage: 10
   freezeTurret: 0
   slowDuration: 1.5
   slowPrentageAmount: 0.5
   DeathLaserTurret: 0
+  upgradeName1: Improved loading mechanisms
+  upgradeCost1: 45
+  upgradeName2: Armor piercing shells
+  upgradeCost2: 30
+  upgradeName3: Not defined
+  upgradeCost3: 0
   enemyTag: Enemy
   planetTag: Planet
   rotateAxis: {fileID: 2507225256901360282}
