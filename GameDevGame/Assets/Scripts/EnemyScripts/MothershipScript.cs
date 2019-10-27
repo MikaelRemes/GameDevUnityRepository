@@ -6,6 +6,7 @@ public class MothershipScript : MonoBehaviour
     public GameObject spikerEnemy;
     public GameObject stealthEnemy;
     public GameObject superUfoEnemy;
+    public GameObject hyperUfoEnemy;
     public float enemySpawnDelay = 0.8f;
 
     void SpawnBasicEnemy()
@@ -34,6 +35,13 @@ public class MothershipScript : MonoBehaviour
         GameObject currentEnemy = Instantiate(superUfoEnemy);
         currentEnemy.transform.position = gameObject.transform.position;
         Debug.Log("Spawned super ufo enemy");
+    }
+
+    public void SpawnHyperUfoEnemy()
+    {
+        GameObject currentEnemy = Instantiate(hyperUfoEnemy);
+        currentEnemy.transform.position = gameObject.transform.position;
+        Debug.Log("Spawned world ending enemy");
     }
 
     public void SpawnEnemiesFromShip(int ufoEnemyNum, int spikerEnemyNum, int stealthEnemyNum, int SuperUfoEnemyNum)

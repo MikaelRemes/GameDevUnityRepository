@@ -4797,4 +4797,6 @@ MonoBehaviour:
     type: 3}
   superUfoEnemy: {fileID: 2438947260381041814, guid: ecef08a9bd076d8439223b41dab1e198,
     type: 3}
+  hyperUfoEnemy: {fileID: 2438947260381041814, guid: ef4d7e59c0a30d845b584fbd5c3a6b42,
+    type: 3}
   enemySpawnDelay: 0.8
