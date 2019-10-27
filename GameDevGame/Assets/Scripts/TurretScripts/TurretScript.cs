@@ -183,25 +183,40 @@ public class TurretScript : MonoBehaviour
         }
     }
     
-    //upgrades turret, returns cost
-    public int UpgradeTurret(int upgradeNum)
+    //upgrades turret, returns true if successful
+    public bool UpgradeTurret(int upgradeNum)
     {
         //cannon turret
         if (bulletTurret)
         {
             if (upgradeNum == 1)
             {
-                fireRatePerSec += 1;
-                return upgradeCost1;
+                if (Player.monies > upgradeCost1)
+                {
+                    fireRatePerSec += 1;
+                    Player.monies -= upgradeCost1;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 2)
             {
-                damage += 5;
-                return upgradeCost2;
+                if (Player.monies > upgradeCost2)
+                {
+                    damage += 5;
+                    Player.monies -= upgradeCost2;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 3)
             {
-                return upgradeCost3;
+                if (Player.monies > upgradeCost3)
+                {
+                    Player.monies -= upgradeCost3;
+                    return true;
+                }
+                else return false;
             }
         }
 
@@ -210,16 +225,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                range += 100;
-                return upgradeCost1;
+                if (Player.monies > upgradeCost1)
+                {
+                    range += 100;
+                    Player.monies -= upgradeCost1;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 2)
             {
-                return upgradeCost2;
+                if (Player.monies > upgradeCost2)
+                {
+                    Player.monies -= upgradeCost2;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 3)
             {
-                return upgradeCost3;
+                if (Player.monies > upgradeCost3)
+                {
+                    Player.monies -= upgradeCost3;
+                    return true;
+                }
+                else return false;
             }
         }
 
@@ -228,16 +258,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                fireRatePerSec += 1;
-                return upgradeCost1;
+                if (Player.monies > upgradeCost1)
+                {
+                    fireRatePerSec += 1; 
+                    Player.monies -= upgradeCost1;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 2)
             {
-                return upgradeCost2;
+                if (Player.monies > upgradeCost2)
+                {
+                    Player.monies -= upgradeCost2;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 3)
             {
-                return upgradeCost3;
+                if (Player.monies > upgradeCost3)
+                {
+                    Player.monies -= upgradeCost3;
+                    return true;
+                }
+                else return false;
             }
         }
 
@@ -246,16 +291,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                slowPrentageAmount += 0.25f;
-                return upgradeCost1;
+                if (Player.monies > upgradeCost1)
+                {
+                    slowPrentageAmount += 0.25f;
+                    Player.monies -= upgradeCost1;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 2)
             {
-                return upgradeCost2;
+                if (Player.monies > upgradeCost2)
+                {
+                    Player.monies -= upgradeCost2;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 3)
             {
-                return upgradeCost3;
+                if (Player.monies > upgradeCost3)
+                {
+                    Player.monies -= upgradeCost3;
+                    return true;
+                }
+                else return false;
             }
         }
 
@@ -264,19 +324,34 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                damage += 16;
-                return upgradeCost1;
+                if (Player.monies > upgradeCost1)
+                {
+                    damage += 16;
+                    Player.monies -= upgradeCost1;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 2)
             {
-                return upgradeCost2;
+                if (Player.monies > upgradeCost2)
+                {
+                    Player.monies -= upgradeCost2;
+                    return true;
+                }
+                else return false;
             }
             if (upgradeNum == 3)
             {
-                return upgradeCost3;
+                if (Player.monies > upgradeCost3)
+                {
+                    Player.monies -= upgradeCost3;
+                    return true;
+                }
+                else return false;
             }
         }
 
-        return 0;
+        return false;
     }
 }

@@ -6,6 +6,7 @@ public class UpgradePanelScript : MonoBehaviour
 
     public Camera cameraView;
     public string turretTag = "Turret";
+    TurretScript turret;
 
     public Text turretNameText;
     public Text turretDamageText;
@@ -28,7 +29,7 @@ public class UpgradePanelScript : MonoBehaviour
                 GameObject objectHit = hit.collider.gameObject;
                 if (objectHit.tag.Equals(turretTag))
                 {
-                    TurretScript turret = objectHit.GetComponent<TurretScript>();
+                    turret = objectHit.GetComponent<TurretScript>();
                     turretNameText.text = turret.turretName;
                     turretDamageText.text = "Damage: " + turret.damage;
                     turretFireRateText.text = "Fire rate / sec: " + turret.fireRatePerSec;
@@ -39,6 +40,30 @@ public class UpgradePanelScript : MonoBehaviour
                     upgradeButton3.GetComponentInChildren<Text>().text = turret.upgradeName3 + "(" + turret.upgradeCost3 + ")";
                 }
             }
+        }
+    }
+
+    void updateText()
+    {
+        if (turret != null)
+        {
+            turretNameText.text = turret.turretName;
+            turretDamageText.text = "Damage: " + turret.damage;
+            turretFireRateText.text = "Fire rate / sec: " + turret.fireRatePerSec;
+            turretRangeText.text = "Range: " + turret.range;
+
+            upgradeButton1.GetComponentInChildren<Text>().text = turret.upgradeName1 + "(" + turret.upgradeCost1 + ")";
+            upgradeButton2.GetComponentInChildren<Text>().text = turret.upgradeName2 + "(" + turret.upgradeCost2 + ")";
+            upgradeButton3.GetComponentInChildren<Text>().text = turret.upgradeName3 + "(" + turret.upgradeCost3 + ")";
+        }
+    }
+
+    public void UpgradeTurretX(int x)
+    {
+        if(turret != null)
+        {
+            turret.UpgradeTurret(x);
+            updateText();
         }
     }
 }
