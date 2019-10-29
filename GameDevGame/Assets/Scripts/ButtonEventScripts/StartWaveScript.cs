@@ -23,6 +23,7 @@ public class StartWaveScript : MonoBehaviour
     {
         GameObject currentMothership = Instantiate(enemyMotherShip);
         currentMothership.transform.position = position;
+        currentMothership.transform.LookAt(new Vector3(0, 0, 0));
     }
 
     public void StartWave()
