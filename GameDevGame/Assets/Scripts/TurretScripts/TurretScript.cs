@@ -30,13 +30,16 @@ public class TurretScript : MonoBehaviour
     [Header("Death laser")]
     public bool DeathLaserTurret = false;
 
-    [Header("upgrade names")]
+    [Header("upgrade fields")]
     public string upgradeName1 = "Upgrade 1";
     public int upgradeCost1 = 0;
+    public bool upgraded1 = false;
     public string upgradeName2 = "Upgrade 2";
     public int upgradeCost2 = 0;
+    public bool upgraded2 = false;
     public string upgradeName3 = "Upgrade 3";
     public int upgradeCost3 = 0;
+    public bool upgraded3 = false;
 
     [Header("Setup fields (ignore)")]
     public string enemyTag = "Enemy";
@@ -48,9 +51,6 @@ public class TurretScript : MonoBehaviour
 
     private Transform target;
     private float fireCountDown = 0f;
-    private bool upgraded1 = false;
-    private bool upgraded2 = false;
-    private bool upgraded3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -191,29 +191,32 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1)
+                if (Player.monies > upgradeCost1 && !upgraded1)
                 {
                     fireRatePerSec += 1;
                     Player.monies -= upgradeCost1;
+                    upgraded1 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2)
+                if (Player.monies > upgradeCost2 && !upgraded2)
                 {
                     damage += 5;
                     Player.monies -= upgradeCost2;
+                    upgraded2 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3)
+                if (Player.monies > upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
+                    upgraded3 = true;
                     return true;
                 }
                 else return false;
@@ -225,28 +228,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1)
+                if (Player.monies > upgradeCost1 && !upgraded1)
                 {
                     range += 100;
                     Player.monies -= upgradeCost1;
+                    upgraded1 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2)
+                if (Player.monies > upgradeCost2 && !upgraded2)
                 {
                     Player.monies -= upgradeCost2;
+                    upgraded2 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3)
+                if (Player.monies > upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
+                    upgraded3 = true;
                     return true;
                 }
                 else return false;
@@ -258,28 +264,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1)
+                if (Player.monies > upgradeCost1 && !upgraded1)
                 {
                     fireRatePerSec += 1; 
                     Player.monies -= upgradeCost1;
+                    upgraded1 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2)
+                if (Player.monies > upgradeCost2 && !upgraded2)
                 {
                     Player.monies -= upgradeCost2;
+                    upgraded2 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3)
+                if (Player.monies > upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
+                    upgraded3 = true;
                     return true;
                 }
                 else return false;
@@ -291,28 +300,31 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1)
+                if (Player.monies > upgradeCost1 && !upgraded1)
                 {
                     slowPrentageAmount += 0.25f;
                     Player.monies -= upgradeCost1;
+                    upgraded1 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2)
+                if (Player.monies > upgradeCost2 && !upgraded2)
                 {
                     Player.monies -= upgradeCost2;
+                    upgraded2 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3)
+                if (Player.monies > upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
+                    upgraded3 = true;
                     return true;
                 }
                 else return false;
@@ -322,30 +334,33 @@ public class TurretScript : MonoBehaviour
         //death laser
         else if (DeathLaserTurret)
         {
-            if (upgradeNum == 1)
+            if (upgradeNum == 1 && !upgraded1)
             {
                 if (Player.monies > upgradeCost1)
                 {
                     damage += 16;
                     Player.monies -= upgradeCost1;
+                    upgraded1 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2)
+                if (Player.monies > upgradeCost2 && !upgraded2)
                 {
                     Player.monies -= upgradeCost2;
+                    upgraded2 = true;
                     return true;
                 }
                 else return false;
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3)
+                if (Player.monies > upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
+                    upgraded3 = true;
                     return true;
                 }
                 else return false;
