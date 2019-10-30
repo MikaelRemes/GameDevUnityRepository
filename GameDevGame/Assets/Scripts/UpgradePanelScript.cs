@@ -16,7 +16,12 @@ public class UpgradePanelScript : MonoBehaviour
     public GameObject upgradeButton1;
     public GameObject upgradeButton2;
     public GameObject upgradeButton3;
-   
+
+    private void Start()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +34,7 @@ public class UpgradePanelScript : MonoBehaviour
                 GameObject objectHit = hit.collider.gameObject;
                 if (objectHit.tag.Equals(turretTag))
                 {
+                    transform.GetChild(0).gameObject.SetActive(true);
                     turret = objectHit.GetComponent<TurretScript>();
                     updateText();
                 }
@@ -100,5 +106,10 @@ public class UpgradePanelScript : MonoBehaviour
             turret.UpgradeTurret(x);
             updateText();
         }
+    }
+
+    public void ClosePanel()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }
