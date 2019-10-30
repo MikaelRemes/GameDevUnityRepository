@@ -33,8 +33,10 @@ public class StartWaveScript : MonoBehaviour
             inTheMiddleOfWave = true;
             childText.text = inTheMiddleOfWaveText;
             waveCountDown = 1f;
+
             GameObject[] motherships = GameObject.FindGameObjectsWithTag(mothershipTag);
-            
+
+
             SpawnWave(Player.wave, motherships);
 
             Player.wave++;

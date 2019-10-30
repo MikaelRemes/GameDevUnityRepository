@@ -7,7 +7,24 @@ public class MothershipScript : MonoBehaviour
     public GameObject stealthEnemy;
     public GameObject superUfoEnemy;
     public GameObject hyperUfoEnemy;
+    public GameObject playerPlanet;
+    public LineRenderer enemyDirectionPointerEffect;
     public float enemySpawnDelay = 0.8f;
+
+
+    void Start()
+    {
+        //necessary to find player when spawned via script
+        playerPlanet = GameObject.FindGameObjectWithTag("Planet");
+    }
+
+    private void Update()
+    {
+        if (enemyDirectionPointerEffect != null) {
+            enemyDirectionPointerEffect.SetPosition(0, transform.position);
+            enemyDirectionPointerEffect.SetPosition(1, playerPlanet.transform.position);
+        }
+    }
 
     void SpawnBasicEnemy()
     {
