@@ -10,14 +10,38 @@ public class Player : MonoBehaviour
     public static int monies=1000;
     public static int wave=1;
 
+    public GameObject YouLoseText;
+
     public Text hpText;
     public Text waveText;
     public Text moniesText;
-    
+
+    private void Start()
+    {
+        //Hides losing text from the view
+        YouLoseText.gameObject.SetActive(false);
+    }
+
+
     void Update()
     {
-        //TODO: check current HP, if 0 end game
 
+        //TODO: check current HP, if 0 end game
+        if (HP < 1)
+        {
+            // "Pops" the lose text with buttons
+            YouLoseText.SetActive(true);
+            //Stops time
+            Time.timeScale = 0;
+            // Gets script for buttons
+            GetComponent<MenuButtons>();
+
+        }
+        else
+        {
+            YouLoseText.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
         UpdateTextBoxes();
     }
 

@@ -15,5 +15,25 @@ public class MenuButtons : MonoBehaviour
         Debug.Log("The game quits!");
         Application.Quit();
     }
-   
+
+    public void Retry()
+    {
+        Time.timeScale = 1;
+        GetComponent<Player>();
+        Player.HP = 10;
+        Player.monies = 1000;
+        Player.wave = 1;
+        SceneManager.LoadScene(1);
+    }
+
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        GetComponent<Player>();
+        Player.HP = 10;
+        Player.monies = 1000;
+        Player.wave = 1;
+        SceneManager.LoadScene(0);
+    }
 }
