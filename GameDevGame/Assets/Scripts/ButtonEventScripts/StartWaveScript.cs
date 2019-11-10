@@ -11,20 +11,29 @@ public class StartWaveScript : MonoBehaviour
     public string inTheMiddleOfWaveText ="WAVE INCOMING!";
     public string startWaveText = "START WAVE";
 
-    private bool inTheMiddleOfWave=false;
+    public bool inTheMiddleOfWave=false;
+
     private float waveCountDown = 1f;
+    private int MotherShips = 0;
+
+    private GameObject currentMothership;
 
     private void Start()
     {
-        SpawnMothership(enemyMotherShipSpawns[0]);
+        SpawnMothership();
+      //  InvokeRepeating("SpawnMothership", 1.0f, 1.0f);
+
     }
 
-    public void SpawnMothership(Vector3 position)
+    public void SpawnMothership()
     {
-        GameObject currentMothership = Instantiate(enemyMotherShip);
-        currentMothership.transform.position = position;
-        currentMothership.transform.LookAt(new Vector3(0, 0, 0));
-    }
+        //Count how many motherships there are on game
+        MotherShips = MotherShips + 1;
+
+        //All new MothershipHandle instantiates at point ZERO
+        //Mothership rotation vs planet is handled in MothershipScript on Awake
+        currentMothership = Instantiate(enemyMotherShip, new Vector3(0, 0, 0), transform.rotation) as GameObject;
+     }
 
     public void StartWave()
     {
@@ -67,7 +76,7 @@ public class StartWaveScript : MonoBehaviour
                 break;
             case 3:
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(3, 3, 0, 0);
-                SpawnMothership(enemyMotherShipSpawns[1]);
+                SpawnMothership();
                 break;
             case 4:
                 enemyMotherShips[0].GetComponent<MothershipScript>().QuickSpawnEnemiesFromShip(8, 0, 0, 0);
@@ -83,7 +92,7 @@ public class StartWaveScript : MonoBehaviour
                 break;
             case 6:
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 1);
-                SpawnMothership(enemyMotherShipSpawns[2]);
+                SpawnMothership();
                 break;
             case 7:
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 8, 5, 0);

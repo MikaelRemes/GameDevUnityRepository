@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826fa3b870ece7d4088780025a85b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMotherShip: {fileID: 6262681811154240308, guid: c93f3ea764e16904090c409c5f2ab033,
+  enemyMotherShip: {fileID: 4865747469862046188, guid: b3b3d35e318908746971f10a73087b37,
     type: 3}
   enemyMotherShipSpawns:
   - {x: -320, y: 0, z: 0}
@@ -2133,6 +2133,7 @@ MonoBehaviour:
   childText: {fileID: 1141305011}
   inTheMiddleOfWaveText: WAVE INCOMING!
   startWaveText: START WAVE
+  inTheMiddleOfWave: 0
 --- !u!1 &966660411
 GameObject:
   m_ObjectHideFlags: 0

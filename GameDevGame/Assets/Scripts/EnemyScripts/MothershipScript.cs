@@ -11,11 +11,15 @@ public class MothershipScript : MonoBehaviour
     public LineRenderer enemyDirectionPointerEffect;
     public float enemySpawnDelay = 0.8f;
 
+    private GameObject StartWaveSkripti;
 
     void Start()
     {
         //necessary to find player when spawned via script
         playerPlanet = GameObject.FindGameObjectWithTag("Planet");
+
+        //Find Startwavescript
+        StartWaveSkripti = GameObject.Find("StartWaveButton");
     }
 
     private void Update()
@@ -23,6 +27,15 @@ public class MothershipScript : MonoBehaviour
         if (enemyDirectionPointerEffect != null) {
             enemyDirectionPointerEffect.SetPosition(0, transform.position);
             enemyDirectionPointerEffect.SetPosition(1, playerPlanet.transform.position);
+        }
+
+        if (StartWaveSkripti.GetComponent<StartWaveScript>().inTheMiddleOfWave == true)
+        {
+            //Move slowly forward closer to planet during wave
+            if (transform.localPosition.x > 150)
+            {
+                transform.localPosition = new Vector3(transform.localPosition.x - 5 * Time.deltaTime, 0, 0);
+            }
         }
     }
 
