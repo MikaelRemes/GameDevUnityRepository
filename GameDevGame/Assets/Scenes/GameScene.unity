@@ -1419,9 +1419,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2048423831}
-        m_MethodName: ClosePanel
-        m_Mode: 1
+      - m_Target: {fileID: 2048423827}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2486,6 +2486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraView: {fileID: 534669904}
   turretTag: Turret
+  upgradePanel: {fileID: 2048423827}
   turretNameText: {fileID: 58743521}
   turretDamageText: {fileID: 1664355881}
   turretFireRateText: {fileID: 1457821654}
@@ -5257,7 +5258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2048423828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5334,6 +5335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraView: {fileID: 534669904}
   turretTag: Turret
+  upgradePanel: {fileID: 0}
   turretNameText: {fileID: 58743521}
   turretDamageText: {fileID: 1664355881}
   turretFireRateText: {fileID: 1457821654}
