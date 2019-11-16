@@ -44,6 +44,7 @@ public class TurretScript : MonoBehaviour
     [Header("Setup fields (ignore)")]
     public string enemyTag = "Enemy";
     public string planetTag = "Planet";
+    public string moonTag = "Moon";
     public Transform rotateAxis;
     public Transform firePoint;
     public GameObject fireEffect;
@@ -57,6 +58,7 @@ public class TurretScript : MonoBehaviour
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
+
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -68,16 +70,24 @@ public class TurretScript : MonoBehaviour
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy < shortestDistance)
             {
-                //check that planet doesn't obstruct the view to enemy
-                //RaycastHit hit;
-                //if (Physics.Raycast(firePoint.position,enemy.transform.position, out hit))
-                //{
-                    //if (!hit.collider.tag.Equals(planetTag))
-                    //{
-                        shortestDistance = distanceToEnemy;
-                        nearestEnemy = enemy;
-                    //}
-                //}
+                //checks that planet or moon doesn't obstruct the view to enemy
+                bool isPlanetOrMoonObstructingView = false;
+                RaycastHit hit = new RaycastHit();
+                if (Physics.Raycast(firePoint.transform.position, enemy.transform.position - firePoint.transform.position, out hit))
+                {
+                    if (hit.collider.tag.Equals(planetTag) || hit.collider.tag.Equals(moonTag))
+                    {
+                        isPlanetOrMoonObstructingView = true;
+                    }
+                }
+                
+
+                if (!isPlanetOrMoonObstructingView)
+                {
+                    shortestDistance = distanceToEnemy;
+                    nearestEnemy = enemy;
+                    Debug.DrawLine(transform.position, enemy.transform.position, Color.red, 3f);
+                }
             }
         }
 
