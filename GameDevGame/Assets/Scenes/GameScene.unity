@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2048423831}
+      - m_Target: {fileID: 983918318}
         m_MethodName: UpgradeTurretX
         m_Mode: 3
         m_Arguments:
@@ -3127,7 +3127,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2048423831}
+      - m_Target: {fileID: 983918318}
         m_MethodName: UpgradeTurretX
         m_Mode: 3
         m_Arguments:
@@ -5251,7 +5251,6 @@ GameObject:
   - component: {fileID: 2048423828}
   - component: {fileID: 2048423830}
   - component: {fileID: 2048423829}
-  - component: {fileID: 2048423831}
   m_Layer: 5
   m_Name: UpgradePanel
   m_TagString: Untagged
@@ -5321,28 +5320,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048423827}
   m_CullTransparentMesh: 0
---- !u!114 &2048423831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048423827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29039433f1292d3429978566f6196ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraView: {fileID: 534669904}
-  turretTag: Turret
-  upgradePanel: {fileID: 0}
-  turretNameText: {fileID: 58743521}
-  turretDamageText: {fileID: 1664355881}
-  turretFireRateText: {fileID: 1457821654}
-  turretRangeText: {fileID: 1138787753}
-  upgradeButton1: {fileID: 381622807}
-  upgradeButton2: {fileID: 2113470176}
-  upgradeButton3: {fileID: 1189449093}
 --- !u!1 &2113470176
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,7 +5399,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2048423831}
+      - m_Target: {fileID: 983918318}
         m_MethodName: UpgradeTurretX
         m_Mode: 3
         m_Arguments:
