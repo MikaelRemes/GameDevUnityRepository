@@ -207,6 +207,7 @@ public class TurretScript : MonoBehaviour
                     Player.monies -= upgradeCost1;
                     upgraded1 = true;
                     return true;
+                    //Debug.Log("Turret Upgraded");
                 }
                 else return false;
             }

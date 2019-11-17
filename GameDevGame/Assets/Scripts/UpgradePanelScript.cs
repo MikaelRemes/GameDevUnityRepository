@@ -97,7 +97,7 @@ public class UpgradePanelScript : MonoBehaviour
 
     public void UpgradeTurretX(int x)
     {
-        if(turret != null)
+        if (turret != null)
         {
             turret.UpgradeTurret(x);
             updateText();
