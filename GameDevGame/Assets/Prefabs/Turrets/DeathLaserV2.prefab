@@ -112,27 +112,30 @@ MonoBehaviour:
   bulletTurret: 0
   bullet: {fileID: 0}
   missileTurret: 0
-  missile: {fileID: 0}
+  missile: {fileID: 4055849700355911237, guid: 5d7cbb8c37342d7468d0de3ad1eb790e, type: 3}
   aoeDamage: 0
   pulseTurret: 0
   freezeTurret: 0
   slowDuration: 0
   slowPrentageAmount: 0
   DeathLaserTurret: 1
-  upgradeName1: Fusion core
-  upgradeCost1: 1000
+  voidLaserMaterial: {fileID: 2100000, guid: e4ef15c5761699f41994e19e29c34aaa, type: 2}
+  upgradeName1: Upgraded fusion core
+  upgradeCost1: 400
   upgraded1: 0
-  upgradeName2: Not defined
-  upgradeCost2: 0
+  upgradeName2: Cold fusion
+  upgradeCost2: 150
   upgraded2: 0
-  upgradeName3: Not defined
-  upgradeCost3: 0
+  upgradeName3: Void laser
+  upgradeCost3: 1000
   upgraded3: 0
   enemyTag: Enemy
   planetTag: Planet
+  moonTag: Moon
   rotateAxis: {fileID: 5093585409789295721}
   firePoint: {fileID: 5093585409789295721}
   fireEffect: {fileID: 0}
+  upgradedFireEffect: {fileID: 0}
   laserEffect: {fileID: 2476422443888422770}
 --- !u!120 &2476422443888422770
 LineRenderer:

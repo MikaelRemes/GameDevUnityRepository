@@ -216,14 +216,19 @@ MonoBehaviour:
   slowPrentageAmount: 0.5
   DeathLaserTurret: 0
   upgradeName1: Hypercoolers
-  upgradeCost1: 70
-  upgradeName2: Not defined
-  upgradeCost2: 0
-  upgradeName3: Not defined
-  upgradeCost3: 0
+  upgradeCost1: 100
+  upgraded1: 0
+  upgradeName2: Piercer rays
+  upgradeCost2: 40
+  upgraded2: 0
+  upgradeName3: Extra hypercoolers
+  upgradeCost3: 200
+  upgraded3: 0
   enemyTag: Enemy
   planetTag: Planet
+  moonTag: Moon
   rotateAxis: {fileID: 6652663876886952465}
   firePoint: {fileID: 6652663876886952465}
   fireEffect: {fileID: 0}
+  upgradedFireEffect: {fileID: 0}
   laserEffect: {fileID: 212479418715082262}

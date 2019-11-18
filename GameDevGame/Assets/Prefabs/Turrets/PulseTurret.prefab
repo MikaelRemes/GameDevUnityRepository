@@ -120,14 +120,20 @@ MonoBehaviour:
   DeathLaserTurret: 0
   upgradeName1: Overclocked pulse emitter
   upgradeCost1: 50
-  upgradeName2: Not defined
-  upgradeCost2: 0
-  upgradeName3: Not defined
-  upgradeCost3: 0
+  upgraded1: 0
+  upgradeName2: pulse oscillator
+  upgradeCost2: 50
+  upgraded2: 0
+  upgradeName3: Fusion pulse
+  upgradeCost3: 120
+  upgraded3: 0
   enemyTag: Enemy
   planetTag: Planet
+  moonTag: Moon
   rotateAxis: {fileID: 9146825806261914891}
   firePoint: {fileID: 9146825806261914891}
-  fireEffect: {fileID: 5729863782953753747, guid: 11b3661bdb3a2744eb903e88affe4b7a,
+  fireEffect: {fileID: 5729863782953753747, guid: f54841a414358af4fba6526f3a79217a,
+    type: 3}
+  upgradedFireEffect: {fileID: 5729863782953753747, guid: 11b3661bdb3a2744eb903e88affe4b7a,
     type: 3}
   laserEffect: {fileID: 0}

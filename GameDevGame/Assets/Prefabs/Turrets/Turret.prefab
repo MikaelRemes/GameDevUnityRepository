@@ -82,12 +82,16 @@ MonoBehaviour:
   DeathLaserTurret: 0
   upgradeName1: Improved loading mechanisms
   upgradeCost1: 45
+  upgraded1: 0
   upgradeName2: Armor piercing shells
   upgradeCost2: 30
-  upgradeName3: Not defined
-  upgradeCost3: 0
+  upgraded2: 0
+  upgradeName3: Super turret technology
+  upgradeCost3: 200
+  upgraded3: 0
   enemyTag: Enemy
   planetTag: Planet
+  moonTag: Moon
   rotateAxis: {fileID: 2507225256901360282}
   firePoint: {fileID: 916941974997473404}
   fireEffect: {fileID: 8618325853932239215, guid: a9d0beac18ec5114fa2819898628c017,
