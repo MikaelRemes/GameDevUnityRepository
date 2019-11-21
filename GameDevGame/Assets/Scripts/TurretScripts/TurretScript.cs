@@ -184,7 +184,7 @@ public class TurretScript : MonoBehaviour
         {
             Vector3 directionOfEnemy = target.position - transform.position;
             Quaternion lookDirection = Quaternion.LookRotation(directionOfEnemy);
-            rotateAxis.rotation = lookDirection;
+            if(rotateAxis != null)rotateAxis.rotation = lookDirection;
 
             if (fireCountDown <= 0)
             {
