@@ -133,7 +133,7 @@ MonoBehaviour:
     type: 3}
   hyperUfoEnemy: {fileID: 2438947260381041814, guid: ef4d7e59c0a30d845b584fbd5c3a6b42,
     type: 3}
-  playerPlanet: {fileID: 0}
+  playerPlanet: {fileID: 100000, guid: a666cc9657cbf7449a26c61d0aa21436, type: 3}
   enemyDirectionPointerEffect: {fileID: 2103949267692824107}
   enemySpawnDelay: 0.8
 --- !u!120 &2103949267692824107
