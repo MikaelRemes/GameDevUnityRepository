@@ -12,12 +12,19 @@ public class Player : MonoBehaviour
 
     public GameObject YouLoseText;
 
+    public int startMoney = 100;
+    public int startHp = 10;
+    public bool developerMode = false;
+
     public Text hpText;
     public Text waveText;
     public Text moniesText;
 
     private void Start()
     {
+        monies = startMoney;
+        HP = startHp;
+        if (developerMode) monies = 999999;
         //Hides losing text from the view
         YouLoseText.gameObject.SetActive(false);
     }

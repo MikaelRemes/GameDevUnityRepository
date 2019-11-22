@@ -1,5 +1,0 @@
-Some improvement suggestions and improvements 05.10.:
-
--TODO: more enemy types, missile targeting could find new target when target is destroyed
-
--created missile turrets, laser turrets and second moon

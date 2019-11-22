@@ -77,10 +77,12 @@ public class TurretPlacerButton2 : MonoBehaviour
                     else if (objectHit.tag.Equals(planetTag) && Player.monies >= cost)
                     {
                         placeTurret(hit.point, hit.normal, objectHit);
+                        DisableTurretPlacement();
                     }
                     else if (objectHit.tag.Equals(moonTag) && Player.monies >= cost)
                     {
                         placeTurret(hit.point, hit.normal, objectHit);
+                        DisableTurretPlacement();
                     }
                     else
                     {

@@ -161,6 +161,8 @@ public class TurretScript : MonoBehaviour
             GameObject enemy = target.gameObject;
             enemy.GetComponent<EnemyAIScript>().takeDamage(damage);
 
+            if (upgraded2) enemy.GetComponent<EnemyAIScript>().slow(slowDuration, slowPrentageAmount);
+
             laserEffect.SetPosition(0, firePoint.position);
             laserEffect.SetPosition(1, target.position);
         }
@@ -214,7 +216,7 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1 && !upgraded1)
+                if (Player.monies >= upgradeCost1 && !upgraded1)
                 {
                     fireRatePerSec += 1;
                     Player.monies -= upgradeCost1;
@@ -225,7 +227,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2 && !upgraded2)
+                if (Player.monies >= upgradeCost2 && !upgraded2)
                 {
                     damage += 5;
                     Player.monies -= upgradeCost2;
@@ -236,7 +238,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3 && !upgraded3)
+                if (Player.monies >= upgradeCost3 && !upgraded3)
                 {
                     fireRatePerSec += 1.5f;
                     damage += 10;
@@ -254,7 +256,7 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1 && !upgraded1)
+                if (Player.monies >= upgradeCost1 && !upgraded1)
                 {
                     range += 100;
                     Player.monies -= upgradeCost1;
@@ -265,7 +267,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2 && !upgraded2)
+                if (Player.monies >= upgradeCost2 && !upgraded2)
                 {
                     damage += 25;
                     aoeDamage += 25;
@@ -277,7 +279,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3 && !upgraded3)
+                if (Player.monies >= upgradeCost3 && !upgraded3)
                 {
                     Player.monies -= upgradeCost3;
                     upgraded3 = true;
@@ -292,7 +294,7 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1 && !upgraded1)
+                if (Player.monies >= upgradeCost1 && !upgraded1)
                 {
                     fireRatePerSec += 1; 
                     Player.monies -= upgradeCost1;
@@ -303,7 +305,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2 && !upgraded2)
+                if (Player.monies >= upgradeCost2 && !upgraded2)
                 {
                     fireRatePerSec += 1;
                     Player.monies -= upgradeCost2;
@@ -314,7 +316,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3 && !upgraded3)
+                if (Player.monies >= upgradeCost3 && !upgraded3)
                 {
                     damage += 25;
                     range += 25;
@@ -331,7 +333,7 @@ public class TurretScript : MonoBehaviour
         {
             if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1 && !upgraded1)
+                if (Player.monies >= upgradeCost1 && !upgraded1)
                 {
                     slowPrentageAmount += 0.15f;
                     slowDuration += 1;
@@ -343,7 +345,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2 && !upgraded2)
+                if (Player.monies >= upgradeCost2 && !upgraded2)
                 {
                     damage += 1;
                     Player.monies -= upgradeCost2;
@@ -354,7 +356,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3 && !upgraded3)
+                if (Player.monies >= upgradeCost3 && !upgraded3)
                 {
                     slowPrentageAmount += 0.15f;
                     slowDuration += 1;
@@ -369,9 +371,9 @@ public class TurretScript : MonoBehaviour
         //death laser
         else if (DeathLaserTurret)
         {
-            if (upgradeNum == 1 && !upgraded1)
+            if (upgradeNum == 1)
             {
-                if (Player.monies > upgradeCost1)
+                if (Player.monies >= upgradeCost1 && !upgraded1)
                 {
                     damage += 4;
                     Player.monies -= upgradeCost1;
@@ -382,10 +384,8 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 2)
             {
-                if (Player.monies > upgradeCost2 && !upgraded2)
+                if (Player.monies >= upgradeCost2 && !upgraded2)
                 {
-
-                    freezeTurret = true;
                     slowPrentageAmount = 0.25f;
                     slowDuration = 1;
                     Player.monies -= upgradeCost2;
@@ -396,7 +396,7 @@ public class TurretScript : MonoBehaviour
             }
             if (upgradeNum == 3)
             {
-                if (Player.monies > upgradeCost3 && !upgraded3)
+                if (Player.monies >= upgradeCost3 && !upgraded3)
                 {
                     damage += 12;
                     range += 200;
