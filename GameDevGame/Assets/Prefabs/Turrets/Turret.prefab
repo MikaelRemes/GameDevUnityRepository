@@ -80,6 +80,7 @@ MonoBehaviour:
   slowDuration: 1.5
   slowPrentageAmount: 0.5
   DeathLaserTurret: 0
+  voidLaserMaterial: {fileID: 0}
   upgradeName1: Improved loading mechanisms
   upgradeCost1: 45
   upgraded1: 0
@@ -96,6 +97,7 @@ MonoBehaviour:
   firePoint: {fileID: 916941974997473404}
   fireEffect: {fileID: 8618325853932239215, guid: a9d0beac18ec5114fa2819898628c017,
     type: 3}
+  upgradedFireEffect: {fileID: 0}
   laserEffect: {fileID: 0}
 --- !u!23 &4279070547283575318
 MeshRenderer:
