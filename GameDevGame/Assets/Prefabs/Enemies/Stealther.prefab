@@ -49,9 +49,13 @@ MonoBehaviour:
   moneyReward: 30
   playerDamage: 1
   targetPlanet: {fileID: 0}
-  collisionDistance: 20
+  collisionDistance: 19
   explosionEffect: {fileID: 4394887033956546421, guid: a420393bec545e94f8a83bcb2d390a5a,
     type: 3}
+  spawnUfoAttackers: 0
+  spawnUfoRate: 1.5
+  ufoAttacker: {fileID: 0}
+  spawnUfoEffect: {fileID: 0}
 --- !u!1 &4127656027399781202
 GameObject:
   m_ObjectHideFlags: 0
