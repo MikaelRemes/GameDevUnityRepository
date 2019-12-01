@@ -75,7 +75,7 @@ public class StartWaveScript : MonoBehaviour
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(5, 1, 0, 0);
                 break;
             case 3:
-                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(3, 3, 0, 0);
+                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(10, 2, 0, 0);
                 SpawnMothership();
                 break;
             case 4:
@@ -87,22 +87,23 @@ public class StartWaveScript : MonoBehaviour
             case 5:
                 enemyMotherShips[0].GetComponent<MothershipScript>().QuickSpawnEnemiesFromShip(10, 0, 0, 0);
                 enemyMotherShips[1].GetComponent<MothershipScript>().QuickSpawnEnemiesFromShip(10, 0, 0, 0);
-                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 3, 0);
-                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 3, 0);
+                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 2, 1, 0);
+                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 3, 0, 0);
                 break;
             case 6:
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 1);
                 SpawnMothership();
                 break;
             case 7:
-                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 8, 5, 0);
-                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 1);
-                enemyMotherShips[2].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 8, 5, 0);
+                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(2, 8, 2, 0);
+                enemyMotherShips[0].GetComponent<MothershipScript>().QuickSpawnEnemiesFromShip(5, 2, 0, 0);
+                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(5, 0, 0, 1);
+                enemyMotherShips[2].GetComponent<MothershipScript>().SpawnEnemiesFromShip(5, 8, 2, 0);
                 break;
             case 8:
-                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 3);
-                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 3);
-                enemyMotherShips[2].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 3);
+                enemyMotherShips[0].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 2);
+                enemyMotherShips[1].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 2);
+                enemyMotherShips[2].GetComponent<MothershipScript>().SpawnEnemiesFromShip(0, 0, 0, 2);
                 break;
             case 9:
                 enemyMotherShips[0].GetComponent<MothershipScript>().SpawnHyperUfoEnemy();
@@ -116,6 +117,7 @@ public class StartWaveScript : MonoBehaviour
                 enemyMotherShips[2].GetComponent<MothershipScript>().SpawnHyperUfoEnemy();
                 break;
             default:
+                Player.HP = 0;
                 break;
         }
     }
