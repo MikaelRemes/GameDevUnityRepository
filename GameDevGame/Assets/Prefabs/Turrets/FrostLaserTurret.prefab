@@ -558,7 +558,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6807723146328227309}
   - component: {fileID: 1707277598992378706}
-  - component: {fileID: 6135476106081349150}
   - component: {fileID: 8859208476608506268}
   m_Layer: 0
   m_Name: Turret
@@ -601,51 +600,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6135476106081349150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449615813682040970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd33982e032d2249a33617a8f4de646, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretName: Cannon turret
-  range: 150
-  fireRatePerSec: 1
-  damage: 5
-  bulletTurret: 1
-  bullet: {fileID: 6732353736341421321, guid: 8fbc8695748f10f49bfec0e666cf4eb0, type: 3}
-  missileTurret: 0
-  missile: {fileID: 0}
-  aoeDamage: 0
-  pulseTurret: 0
-  freezeTurret: 0
-  slowDuration: 1.5
-  slowPrentageAmount: 0.5
-  DeathLaserTurret: 0
-  voidLaserMaterial: {fileID: 0}
-  upgradeName1: Improved loading mechanisms
-  upgradeCost1: 45
-  upgraded1: 0
-  upgradeName2: Armor piercing shells
-  upgradeCost2: 30
-  upgraded2: 0
-  upgradeName3: Super turret technology
-  upgradeCost3: 200
-  upgraded3: 0
-  enemyTag: Enemy
-  planetTag: Planet
-  moonTag: Moon
-  rotateAxis: {fileID: 2910333340011608836}
-  firePoint: {fileID: 2051538529314398065}
-  fireEffect: {fileID: 8618325853932239215, guid: a9d0beac18ec5114fa2819898628c017,
-    type: 3}
-  upgradedFireEffect: {fileID: 0}
-  laserEffect: {fileID: 0}
 --- !u!23 &8859208476608506268
 MeshRenderer:
   m_ObjectHideFlags: 0

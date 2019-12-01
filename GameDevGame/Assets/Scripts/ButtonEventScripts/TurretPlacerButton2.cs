@@ -68,7 +68,6 @@ public class TurretPlacerButton2 : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     //POSSIBLE TODO: ignore moon if planet is hit or vice versa
-                    //TODO: check if enough monies
                     GameObject objectHit = hit.collider.gameObject;
                     if (objectHit.tag.Equals(turretTag))
                     {
