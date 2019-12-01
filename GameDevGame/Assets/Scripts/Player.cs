@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static int HP=10;
     public static int monies=1000;
     public static int wave=1;
+    public static int score = 0;
 
     public GameObject YouLoseText;
 
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     public Text hpText;
     public Text waveText;
     public Text moniesText;
+    public Text scoreText;
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
         {
             // "Pops" the lose text with buttons
             YouLoseText.SetActive(true);
+            scoreText.text = "Score: " + score;
             //Stops time
             Time.timeScale = 0;
             // Gets script for buttons

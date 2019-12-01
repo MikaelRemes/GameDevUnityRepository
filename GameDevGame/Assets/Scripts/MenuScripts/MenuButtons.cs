@@ -23,6 +23,7 @@ public class MenuButtons : MonoBehaviour
         Player.HP = 10;
         Player.monies = 1000;
         Player.wave = 1;
+        Player.score = 0;
         SceneManager.LoadScene(1);
     }
 
@@ -34,6 +35,7 @@ public class MenuButtons : MonoBehaviour
         Player.HP = 10;
         Player.monies = 1000;
         Player.wave = 1;
+        Player.score = 0;
         SceneManager.LoadScene(0);
     }
 }

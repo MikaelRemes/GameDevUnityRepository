@@ -21,8 +21,7 @@ public class MotherShipAwakeRotation : MonoBehaviour
         InvokeRepeating("TimerFunction", 0.5f, 0.5f);
         RandomRotation();
     }
-
-    // Update is called once per frame
+    
     void RandomRotation()
     {
         transform.parent.rotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));

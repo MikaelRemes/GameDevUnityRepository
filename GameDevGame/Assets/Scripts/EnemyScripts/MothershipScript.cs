@@ -10,6 +10,7 @@ public class MothershipScript : MonoBehaviour
     public GameObject playerPlanet;
     public LineRenderer enemyDirectionPointerEffect;
     public float enemySpawnDelay = 0.8f;
+    public float rotateAroundPlanetSpeed = 1f;
 
     private GameObject StartWaveSkripti;
 
@@ -29,13 +30,18 @@ public class MothershipScript : MonoBehaviour
             enemyDirectionPointerEffect.SetPosition(1, playerPlanet.transform.position);
         }
 
+        //transform.LookAt(playerPlanet.transform.position);
+
         if (StartWaveSkripti.GetComponent<StartWaveScript>().inTheMiddleOfWave == true)
         {
             //Move slowly forward closer to planet during wave
-            if (transform.localPosition.x > 150)
+            if (transform.localPosition.x > 170)
             {
                 transform.localPosition = new Vector3(transform.localPosition.x - 5 * Time.deltaTime, 0, 0);
             }
+
+            //rotate around planet slowly during wave
+            transform.parent.RotateAround(playerPlanet.transform.position, Vector3.up, Time.deltaTime * rotateAroundPlanetSpeed);
         }
     }
 

@@ -95,6 +95,7 @@ public class EnemyAIScript : MonoBehaviour
     public void die()
     {
         Player.monies += moneyReward;
+        Player.score += moneyReward;
         Destroy(gameObject);
     }
 
