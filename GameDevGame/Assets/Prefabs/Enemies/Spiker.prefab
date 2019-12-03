@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4474187544103898258}
   - component: {fileID: 6213078962251429509}
+  - component: {fileID: 65725529813025344}
+  - component: {fileID: 65788083756705204}
+  - component: {fileID: 54052631597124930}
   m_Layer: 0
   m_Name: Spiker
   m_TagString: Enemy
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3141604689190670079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 144.36438, y: 43.74213, z: 39.11589}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4597871482691266295}
   m_Father: {fileID: 0}
@@ -56,6 +59,48 @@ MonoBehaviour:
   spawnUfoRate: 1.5
   ufoAttacker: {fileID: 0}
   spawnUfoEffect: {fileID: 0}
+--- !u!65 &65725529813025344
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141604689190670079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65788083756705204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141604689190670079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.43, y: 0.37, z: 0.82}
+  m_Center: {x: 0, y: -0.21, z: -0.88}
+--- !u!54 &54052631597124930
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141604689190670079}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1000
+  m_AngularDrag: 1000
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &4594278678972892125
 GameObject:
   m_ObjectHideFlags: 0

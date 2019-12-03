@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6431958378355687205}
   - component: {fileID: 5229408966551088895}
+  - component: {fileID: 65147355342733460}
+  - component: {fileID: 65620821206180922}
+  - component: {fileID: 54257367403397966}
   m_Layer: 0
   m_Name: Stealther
   m_TagString: Enemy
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2815724633971459262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 8611917564945933873}
   m_Father: {fileID: 0}
@@ -56,6 +59,48 @@ MonoBehaviour:
   spawnUfoRate: 1.5
   ufoAttacker: {fileID: 0}
   spawnUfoEffect: {fileID: 0}
+--- !u!65 &65147355342733460
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815724633971459262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.36, y: 2.19, z: 11.91}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65620821206180922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815724633971459262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.36, y: 1.57, z: 3.38}
+  m_Center: {x: 0, y: 0, z: -3.1}
+--- !u!54 &54257367403397966
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815724633971459262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1000
+  m_AngularDrag: 1000
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &8613175705566533309
 GameObject:
   m_ObjectHideFlags: 0

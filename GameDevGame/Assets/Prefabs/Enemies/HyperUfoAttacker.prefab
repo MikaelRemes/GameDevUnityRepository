@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1303064387512073584}
   - component: {fileID: 4319785048953477605}
   - component: {fileID: 5636783087526250184}
+  - component: {fileID: 65820965340796148}
+  - component: {fileID: 65964950474266474}
+  - component: {fileID: 54443718010394938}
   m_Layer: 0
   m_Name: HyperUfoAttacker
   m_TagString: Enemy
@@ -27,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2438947260381041814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_Children:
   - {fileID: 8314545273395561402}
   - {fileID: 7776214628321176483}
@@ -72,8 +75,50 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.49
+  m_Center: {x: 0, y: 0.55, z: -0.75}
+--- !u!65 &65820965340796148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438947260381041814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.96}
+  m_Center: {x: 0, y: 0, z: 0.54}
+--- !u!65 &65964950474266474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438947260381041814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.91, y: 1, z: 2.41}
+  m_Center: {x: 0, y: 0, z: -0.55}
+--- !u!54 &54443718010394938
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438947260381041814}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1000
+  m_AngularDrag: 1000
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &3648246546140451251
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class MothershipScript : MonoBehaviour
     public GameObject hyperUfoEnemy;
     public GameObject playerPlanet;
     public LineRenderer enemyDirectionPointerEffect;
-    public float enemySpawnDelay = 0.8f;
+    public float enemySpawnDelay = 0.0f; //0.8f;
     public float rotateAroundPlanetSpeed = 1f;
 
     private GameObject StartWaveSkripti;

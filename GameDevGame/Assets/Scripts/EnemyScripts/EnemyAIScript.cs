@@ -58,16 +58,24 @@ public class EnemyAIScript : MonoBehaviour
             spawnUfoCountDown -= Time.deltaTime;
         }
 
-        if (direction.magnitude - collisionDistance <= distanceToMove)
-        {
-            //Enemy reached player's planet
-            HitPlayer();
-            return;
-        }
+ //       if (direction.magnitude - collisionDistance <= distanceToMove)
+  //      {
+   //         //Enemy reached player's planet
+  //          HitPlayer();
+  //          return;
+  //      }
 
         transform.Translate(direction.normalized * distanceToMove, Space.World);
     }
-    
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.other.tag == "Planet" || collision.other.tag == "Turret")
+        {
+            HitPlayer();
+        }
+    }
+
     void HitPlayer()
     {
         Player.HP -= playerDamage;
