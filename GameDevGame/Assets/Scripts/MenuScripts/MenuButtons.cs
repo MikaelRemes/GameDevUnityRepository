@@ -38,4 +38,10 @@ public class MenuButtons : MonoBehaviour
         Player.score = 0;
         SceneManager.LoadScene(0);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 }
