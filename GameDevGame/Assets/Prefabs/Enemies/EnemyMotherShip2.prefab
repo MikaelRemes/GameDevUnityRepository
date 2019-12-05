@@ -135,7 +135,7 @@ MonoBehaviour:
     type: 3}
   playerPlanet: {fileID: 100000, guid: a666cc9657cbf7449a26c61d0aa21436, type: 3}
   enemyDirectionPointerEffect: {fileID: 2103949267692824107}
-  enemySpawnDelay: 0
+  enemySpawnDelay: 0.3
   rotateAroundPlanetSpeed: 1
 --- !u!120 &2103949267692824107
 LineRenderer:
