@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missileSpeed: 35
   missileAcceleration: 10
-  explosionRadius: 30
+  explosionRadius: 25
   missileDirectDamage: 25
   missileAoeDamage: 25
   enemyTag: Enemy
