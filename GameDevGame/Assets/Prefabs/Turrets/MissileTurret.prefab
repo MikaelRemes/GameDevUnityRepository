@@ -337,12 +337,12 @@ MonoBehaviour:
   turretName: Missile Turret
   range: 200
   fireRatePerSec: 0.25
-  damage: 25
+  damage: 20
   bulletTurret: 0
   bullet: {fileID: 0}
   missileTurret: 1
   missile: {fileID: 4055849700355911237, guid: 5d7cbb8c37342d7468d0de3ad1eb790e, type: 3}
-  aoeDamage: 25
+  aoeDamage: 20
   pulseTurret: 0
   freezeTurret: 0
   slowDuration: 1.5
@@ -353,7 +353,7 @@ MonoBehaviour:
   upgradeCost1: 25
   upgraded1: 0
   upgradeName2: anti-matter payload
-  upgradeCost2: 100
+  upgradeCost2: 200
   upgraded2: 0
   upgradeName3: Quad missiles
   upgradeCost3: 400
